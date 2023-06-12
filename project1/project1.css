@@ -38,7 +38,7 @@ header {
 }
 header img {
   width: 120px;
-  height: 24px;
+  aspect-ratio: 5/1;
 }
 header ul {
   display: none;
@@ -47,11 +47,11 @@ header .menu-contents {
   display: flex;
   align-items: center;
 }
+header .menu-contents a {
+  height: 24px;
+}
 header .menu-contents span {
   margin: 0 10px;
-}
-header .kor {
-  display: none;
 }
 
 /***** contents *****/
@@ -99,7 +99,7 @@ main .main-page .main-page-txt {
 main .main-page .main-page-txt p {
   padding: 0 30px;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 48px;
 }
 main .main-page .main-page-txt .txt2 {
   margin-left: 40px;
@@ -115,7 +115,7 @@ main .highlights .back-circle {
   position: absolute;
   background-color: #f9f9f9;
   width: 600px;
-  height: 600px;
+  aspect-ratio: 1;
   border-radius: 50%;
   left: -40%;
   top: 0;
@@ -131,7 +131,7 @@ main .highlights .items .item {
 }
 main .highlights .items .item .item-img {
   width: 320px;
-  height: 210px;
+  aspect-ratio: 6/5;
   position: relative;
 }
 main .highlights .items .item .item-img img {
@@ -145,7 +145,7 @@ main .highlights .items .item .item-img h2 {
   position: absolute;
   transform: rotate(-90deg);
   left: -27%;
-  top: 30%;
+  top: 24%;
   width: 149px;
   line-height: 1.55;
   text-align: right;
@@ -173,7 +173,7 @@ main .centers h1 {
 main .centers .center-img {
   display: block;
   width: 280px;
-  height: 280px;
+  aspect-ratio: 1;
   background: url(./images/center.png) no-repeat 50% / cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -248,8 +248,8 @@ main .careers h1 {
 main .careers .career-img {
   padding: 0 20px;
   display: block;
-  height: 250px;
-  width: 85%;
+  width: 90%;
+  aspect-ratio: 7/5;
   margin: auto;
   background: url(./images/career.png) no-repeat 50% / cover;
   transform: translateY(40px);
@@ -313,7 +313,6 @@ footer .footer-box {
   font-size: 10px;
   justify-content: space-between;
 }
-
 footer .footer-box .footer-contents {
   margin: 30px 0 30px 0;
 }
@@ -377,4 +376,8 @@ footer .footer-info .portfolio {
 footer .footer-info .portfolio:hover {
   background-color: black;
   color: white;
+}
+
+footer .block-mobile {
+  display: block;
 }
