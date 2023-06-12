@@ -369,5 +369,12 @@ footer .footer-info .portfolio {
   text-indent: 5px;
   line-height: 30px;
   background-color: #ddd;
+  color: black;
+  text-align: center;
   cursor: pointer;
+  transition: 0.5s;
+}
+footer .footer-info .portfolio:hover {
+  background-color: black;
+  color: white;
 }
