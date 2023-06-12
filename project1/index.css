@@ -92,7 +92,7 @@ main .main-page .page-contents video {
 }
 main .main-page .main-page-txt {
   position: absolute;
-  top: 15%;
+  top: 16%;
   left: -5%;
   padding: 0 20px;
 }
@@ -126,7 +126,7 @@ main .highlights .items {
   width: 300px;
 }
 main .highlights .items .item {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   position: relative;
 }
 main .highlights .items .item .item-img {
@@ -165,6 +165,9 @@ main .highlights .items .item p {
 main .centers {
   padding: 0 20px;
   position: relative;
+}
+main .centers h1 {
+  margin: 0;
 }
 main .centers .center-img {
   display: block;
@@ -237,5 +240,133 @@ main .sponser ul {
 
 /* careers */
 
-main .careers {
+main .careers h1 {
+  margin: 0;
+  padding: 0 20px;
+}
+main .careers .career-img {
+  padding: 0 20px;
+  display: block;
+  height: 250px;
+  width: 85%;
+  margin: auto;
+  background: url(./images/career.png) no-repeat 50% / cover;
+  transform: translateY(40px);
+}
+main .careers .career-box {
+  background-image: linear-gradient(#8d8d8d, #fff);
+  padding: 80px 30px 120px 30px;
+}
+main .careers .career-box h3 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 20px 0;
+}
+main .careers .career-box p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* footer */
+
+footer {
+  background-color: #313131;
+}
+
+footer .footer-bar {
+  display: flex;
+  font-family: "Noto Sans Kr", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  justify-content: space-between;
+}
+footer .footer-bar .online {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 15px 40px;
+  background-color: #d70f00;
+}
+footer .footer-bar .recruit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 15px 50px;
+  background-color: #ed3022;
+}
+footer .footer-bar span {
+  margin-right: 10px;
+}
+
+footer .footer-box {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%;
+  color: #c3c3c3;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px;
+  justify-content: space-between;
+}
+
+footer .footer-box .footer-contents {
+  margin: 30px 0 30px 0;
+}
+footer .footer-box .footer-left {
+  width: 55%;
+}
+footer .footer-box .footer-right {
+  width: 35%;
+}
+footer .footer-box .footer-right ul {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-box .footer-contents h4 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+footer .footer-box .footer-contents h4::after {
+  content: "";
+  display: block;
+  border: 1px solid #adadad;
+  width: 100%;
+  margin: 10px 0;
+}
+
+footer .footer-box .footer-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer-box .footer-contents ul li {
+  width: 48%;
+  margin: 5px 1px;
+}
+
+footer .footer-info {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #c3c3c3;
+  padding: 0 15px 30px 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+footer .footer-info .portfolio {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  width: 135px;
+  height: 30px;
+  text-indent: 5px;
+  line-height: 30px;
+  background-color: #ddd;
+  cursor: pointer;
 }
