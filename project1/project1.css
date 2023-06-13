@@ -25,6 +25,9 @@ h1 {
 .arrow-box p {
   margin: 0 20px;
 }
+.pc-right {
+  display: flex;
+}
 /***** header *****/
 header {
   width: 100%;
@@ -61,26 +64,23 @@ header .menu-contents span {
 main .main-page {
   width: 100%;
   padding: 30px 20px;
-}
-main .main-page .page-contents {
-  width: 100%;
-  height: 80vh;
   position: relative;
 }
 main .main-page .page-contents .circle {
-  position: absolute;
-  width: 300px;
+  position: relative;
+  display: block;
+  width: 250px;
   aspect-ratio: 1;
-  top: 35%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 20%);
   border-radius: 50%;
   border: 1px solid black;
 }
 main .main-page .page-contents .circle2 {
-  top: 70%;
+  top: 90%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   overflow: hidden;
 }
 main .main-page .page-contents video {
