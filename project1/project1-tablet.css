@@ -61,6 +61,9 @@ main .highlights {
   padding: 0 40px 120px 40px;
   height: 1400px;
 }
+main .highlights h1 {
+  padding-left: 20px;
+}
 main .highlights .back-circle {
   left: auto;
   right: -60%;
@@ -130,7 +133,8 @@ main .highlights .move-line .move-line2 {
 /* centers */
 
 main .centers {
-  padding: 0 40px 60px 40px;
+  width: 90%;
+  margin: 0 auto;
 }
 main .centers .center-img {
   position: relative;
@@ -155,18 +159,28 @@ main .centers .txt-box .txt {
 }
 main .centers .txt-box .view-box .view-txt {
   width: 150px;
+  left: 0%;
 }
 
 /* sponser */
 
 main .sponser ul {
   margin: 100px 0 120px 100px;
-  width: 150%;
+  width: 250%;
   display: flex;
   transform: translateX(-10%);
 }
-
+main .sponser ul li a img {
+  width: 150px;
+  margin: 0 30px;
+}
 /* careers */
+main .careers {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
 main .careers .career-img {
   transform: translateY(80px);
 }
@@ -213,10 +227,27 @@ footer .footer-box {
   font-size: 12px;
   justify-content: space-between;
 }
+footer .footer-box .footer-contents h4 {
+  font-size: 16px;
+}
 footer .footer-box .footer-contents {
   width: 100%;
   margin: 30px 10px;
 }
+footer .footer-box .footer-contents:first-child {
+  margin-left: 0px;
+}
+footer .footer-box .footer-contents:last-child {
+  margin-right: 0px;
+}
+footer .footer-box::after {
+  content: "";
+  display: block;
+  border: 1px solid #adadad;
+  width: 100%;
+  margin: auto;
+}
+
 footer .footer-box .footer-contents ul {
   justify-content: space-between;
 }

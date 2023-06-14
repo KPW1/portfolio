@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 h1 {
   font-weight: bold;
   font-size: 32px;
@@ -27,6 +26,36 @@ h1 {
 }
 .pc-right {
   display: flex;
+}
+.view-box {
+  width: 200px;
+  height: 20px;
+  display: flex;
+  margin: 20px 0;
+  margin-top: 50px;
+  position: relative;
+  text-transform: uppercase;
+}
+.view-box .view-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff7a71;
+  position: relative;
+}
+.view-box .view-txt {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  display: flex;
+  justify-content: center;
+}
+.view-box .view-txt span {
+  margin-left: 10px;
+  position: relative;
+  font-size: 30px;
+  display: block;
+  transform: translateY(-5px);
 }
 /***** header *****/
 header {
@@ -167,9 +196,6 @@ main .centers {
   padding: 0 20px;
   position: relative;
 }
-main .centers h1 {
-  margin: 0;
-}
 main .centers .center-img {
   display: block;
   width: 280px;
@@ -197,53 +223,28 @@ main .centers .txt-box .txt {
   font-weight: 400;
   font-size: 14px;
 }
-main .centers .txt-box .view-box {
-  height: 20px;
-  display: flex;
-  margin: 20px 0;
-  margin-top: 50px;
-  position: relative;
-  text-transform: uppercase;
-}
-main .centers .txt-box .view-box .view-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ff7a71;
-  position: relative;
-}
-main .centers .txt-box .view-box .view-txt {
-  position: absolute;
-  top: 50%;
-  left: 6%;
-  display: flex;
-  justify-content: center;
-}
-main .centers .txt-box .view-box .view-txt span {
-  margin-left: 10px;
-  position: relative;
-  font-size: 30px;
-  display: block;
-  transform: translateY(-5px);
-}
 
 /* sponser */
 
 main .sponser {
+  width: 100%;
   overflow: hidden;
 }
 main .sponser ul {
   margin: 100px 0;
-  width: 150%;
+  width: 100%;
   display: flex;
-  transform: translateX(-5%);
+  align-items: center;
 }
-
+main .sponser ul li a img {
+  width: 100px;
+  margin: 0 30px;
+}
 /* careers */
 
-main .careers h1 {
-  margin: 0;
+main .careers {
   padding: 0 20px;
+  position: relative;
 }
 main .careers .career-img {
   padding: 0 20px;
@@ -380,4 +381,29 @@ footer .footer-info .portfolio:hover {
 
 footer .block-mobile {
   display: block;
+}
+
+main .sponser ul {
+  animation: ani_1 linear infinite 20s;
+  transition: 1s;
+}
+@keyframes ani_1 {
+  0% {
+    transform: translateX(13%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-13%);
+  }
+  50% {
+    transform: translateX(-26%);
+  }
+  75% {
+    transform: translateX(-39%);
+  }
+  100% {
+    transform: translateX(-52%);
+  }
 }
