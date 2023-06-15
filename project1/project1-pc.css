@@ -81,9 +81,15 @@ main .highlights .items .item {
   height: 450px;
   align-items: flex-end;
 }
+main .highlights .move-line {
+  width: 80%;
+}
+main .highlights .move-line span {
+  right: px;
+}
 main .highlights .move-line .move-line2 {
-  right: -73%;
-  width: 73%;
+  right: -30%;
+  width: 30%;
 }
 
 /* centers */
@@ -99,9 +105,9 @@ main .centers .center-img {
   width: 600px;
 }
 main .centers .txt-box {
-  width: 600px;
+  width: 550px;
   left: 50%;
-  transform: translate(0, -50%);
+  transform: translate(0, -45%);
   margin-right: 40px;
 }
 
