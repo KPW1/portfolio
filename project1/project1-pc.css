@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 h1 {
   font-size: 80px;
   padding: 0;
@@ -24,8 +23,9 @@ header ul li a {
   padding: 35px 30px;
 }
 
-/* main-page */
+/***** contents *****/
 
+/* main-page */
 main .main-page {
   height: 90vh;
 }
@@ -111,6 +111,7 @@ main .centers .txt-box {
   margin-right: 40px;
 }
 
+/* sponser */
 main .sponser ul {
   margin: 100px 0 120px 100px;
   width: 250%;
@@ -158,8 +159,9 @@ main .careers .view-box {
   margin-bottom: 50px;
 }
 
-/* footer */
+/***** footer *****/
 
+/* footer-bar */
 footer .footer-bar {
   font-size: 24px;
   justify-content: center;
@@ -183,6 +185,7 @@ footer .footer-bar .foot-txt {
   font-weight: 400;
 }
 
+/* footer-box */
 footer .footer-box {
   width: 90%;
   margin: 0 auto;
@@ -197,6 +200,8 @@ footer .footer-box .footer-contents:first-child ul li {
 footer .footer-box .footer-contents:nth-child(3) ul li {
   width: 40%;
 }
+
+/* footer-info */
 footer .footer-info {
   width: 90%;
   margin: 0 auto;

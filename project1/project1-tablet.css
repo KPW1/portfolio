@@ -85,6 +85,12 @@ main .highlights .items .item {
   height: 450px;
   align-items: flex-end;
 }
+main .highlights .items .item h3 {
+  font-size: 14px;
+}
+main .highlights .items .item p {
+  font-size: 18px;
+}
 main .highlights .items .item1 {
   margin-top: 100px;
 }
@@ -100,12 +106,6 @@ main .highlights .items .item .item-img h2 {
   left: -53%;
   top: 35%;
   width: 300px;
-}
-main .highlights .items .item h3 {
-  font-size: 14px;
-}
-main .highlights .items .item p {
-  font-size: 18px;
 }
 main .highlights .move-line {
   display: flex;
@@ -134,7 +134,6 @@ main .highlights .move-line .move-line2 {
 }
 
 /* centers */
-
 main .centers {
   width: 90%;
   margin: 0 auto;
@@ -166,7 +165,6 @@ main .centers .txt-box .view-box .view-txt {
 }
 
 /* sponser */
-
 main .sponser ul {
   margin: 100px 0 120px 100px;
   width: 250%;
@@ -177,6 +175,7 @@ main .sponser ul li a img {
   width: 150px;
   margin: 0 30px;
 }
+
 /* careers */
 main .careers {
   position: relative;
@@ -208,7 +207,9 @@ main .careers .career-box p {
   font-size: 18px;
 }
 
-/* footer */
+/***** footer *****/
+
+/* footer-bar */
 footer .footer-bar {
   font-weight: bold;
 }
@@ -224,6 +225,7 @@ footer .footer-bar .foot-txt {
   font-weight: 400;
 }
 
+/* footer-box */
 footer .footer-box {
   font-family: "Noto Sans KR", sans-serif;
   width: 100%;
@@ -253,7 +255,7 @@ footer .footer-box::after {
   width: 100%;
   margin: auto;
 }
-
+/* footer-contents size */
 footer .footer-box .footer-contents ul {
   justify-content: space-between;
 }
@@ -282,16 +284,16 @@ footer .footer-info {
   padding: 0 20px 30px 20px;
   font-size: 14px;
 }
-footer .block-mobile {
-  display: inline;
-}
-footer .block-pc {
-  display: block;
-}
-
 footer .footer-info .portfolio {
   width: 200px;
   height: 40px;
   font-size: 16px;
   line-height: 40px;
+}
+
+footer .block-mobile {
+  display: inline;
+}
+footer .block-pc {
+  display: block;
 }
