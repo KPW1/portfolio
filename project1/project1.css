@@ -35,6 +35,7 @@ h1 {
   position: relative;
   text-transform: uppercase;
   align-items: center;
+  cursor: pointer;
 }
 .view-box .view-circle {
   width: 40px;
@@ -100,6 +101,7 @@ main .main-page {
   padding: 30px 20px;
   position: relative;
 }
+
 main .main-page .page-contents .circle {
   position: relative;
   display: block;
