@@ -3,6 +3,12 @@
 .pc-menu {
   display: block;
 }
+.tablet-menu {
+  display: none;
+}
+.view-box .tablet-menu {
+  display: none;
+}
 h1 {
   font-size: 70px;
 }
@@ -168,7 +174,7 @@ main .sponser ul {
   margin: 100px 0 120px 100px;
   width: 250%;
   display: flex;
-  transform: translateX(-10%);
+  animation: tablet_ani linear infinite 30s;
 }
 main .sponser ul li a img {
   width: 150px;
@@ -180,6 +186,9 @@ main .careers {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
+}
+main .careers h1 {
+  margin-bottom: 0;
 }
 main .careers .career-img {
   transform: translateY(80px);

@@ -61,6 +61,7 @@ main .highlights h1 {
   width: 80%;
   margin: 0 auto;
   transform: translateY(15px);
+  max-width: 1440px;
 }
 main .highlights .back-circle {
   top: 50%;
@@ -92,6 +93,7 @@ main .centers {
 main .centers h1 {
   width: 80%;
   margin: 0 auto;
+  max-width: 1440px;
 }
 main .centers .center-img {
   width: 600px;
@@ -107,6 +109,7 @@ main .sponser ul {
   margin: 100px 0 120px 100px;
   width: 250%;
   display: flex;
+  animation: pc_ani linear infinite 30s;
 }
 main .sponser ul li a {
   margin-right: 100px;
@@ -120,9 +123,16 @@ main .sponser ul li a img {
 main .careers {
   position: relative;
   height: 900px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .careers h1 {
+  margin-bottom: 0px;
 }
 main .careers .career-img {
   z-index: 1;
@@ -136,7 +146,10 @@ main .careers .career-box {
   transform: translateY(-450px);
 }
 main .careers .view-box {
-  transform: translate(0, 0);
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 /* footer */
