@@ -8,12 +8,7 @@ h1 {
 .end {
   color: #ee2f22;
 }
-.pc-menu {
-  display: none !important;
-}
-.tablet-menu {
-  display: none !important;
-}
+
 .arrow-box {
   margin-top: 40px;
   display: flex;
@@ -58,6 +53,12 @@ h1 {
   font-size: 30px;
   display: flex;
   align-items: center;
+}
+.pc-menu {
+  display: none;
+}
+.tablet-menu {
+  display: none;
 }
 /***** header *****/
 header {
@@ -424,10 +425,10 @@ footer .block-mobile {
   }
 
   50% {
-    transform: translateX(-600%);
+    transform: translateX(-200%);
   }
 
   100% {
-    transform: translateX(-1200%);
+    transform: translateX(-400%);
   }
 }
