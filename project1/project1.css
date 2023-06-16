@@ -180,17 +180,11 @@ main .highlights .items .item .item-img {
   aspect-ratio: 6/5;
   position: relative;
 }
-
 main .highlights .items .item .item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 1s;
-}
-main .highlights .items .item .item-img img:hover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 main .highlights .items .item .item-img h2 {
   font-family: "Noto Sans KR", sans-serif;
@@ -314,7 +308,7 @@ footer .footer-bar .online {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 30px;
 }
 footer .footer-bar .recruit1 {
   display: flex;
@@ -323,7 +317,7 @@ footer .footer-bar .recruit1 {
 }
 footer .footer-bar .recruit {
   margin: auto;
-  padding: 15px 50px;
+  padding: 15px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
