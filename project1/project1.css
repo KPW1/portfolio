@@ -35,7 +35,6 @@ h1 {
   position: relative;
   text-transform: uppercase;
   align-items: center;
-  cursor: pointer;
 }
 .view-box .view-circle {
   width: 40px;
@@ -48,6 +47,7 @@ h1 {
   display: flex;
   align-items: center;
   transform: translateX(-20px);
+  cursor: pointer;
 }
 .view-box .view-txt span {
   margin-left: 10px;
@@ -180,7 +180,14 @@ main .highlights .items .item .item-img {
   aspect-ratio: 6/5;
   position: relative;
 }
+
 main .highlights .items .item .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+main .highlights .items .item .item-img img:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -297,21 +304,29 @@ footer .footer-bar {
   color: white;
   justify-content: space-between;
 }
-footer .footer-bar .online {
+footer .footer-bar .online1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50%;
-  padding: 15px 40px;
   background-color: #d70f00;
 }
-footer .footer-bar .recruit {
+footer .footer-bar .online {
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 40px;
+}
+footer .footer-bar .recruit1 {
+  display: flex;
   width: 50%;
-  padding: 15px 50px;
   background-color: #ed3022;
+}
+footer .footer-bar .recruit {
+  margin: auto;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .footer-bar span {
   margin-right: 10px;

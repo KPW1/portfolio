@@ -81,6 +81,12 @@ main .highlights .items .item {
   width: 400px;
   height: 450px;
   align-items: flex-end;
+  cursor: pointer;
+}
+main .highlights .items .item .item-img img:hover {
+  width: 400px;
+  height: 340px;
+  transition: 1s;
 }
 main .highlights .move-line {
   width: 80%;
@@ -167,15 +173,21 @@ footer .footer-bar {
   font-size: 24px;
   justify-content: center;
 }
+footer .footer-bar .online1 {
+  width: 570px;
+  transform: translateY(-50%);
+}
+footer .footer-bar .recruit1 {
+  width: 570px;
+  transform: translateY(-50%);
+}
 footer .footer-bar .online {
   width: 600px;
   padding: 25px 40px;
-  transform: translateY(-50%);
 }
 footer .footer-bar .recruit {
   width: 600px;
   padding: 25px 50px;
-  transform: translateY(-50%);
 }
 footer .footer-bar span {
   margin-right: 10px;
