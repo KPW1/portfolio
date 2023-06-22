@@ -106,7 +106,7 @@ main .main-page .page-contents .circle {
   position: relative;
   display: block;
   width: 250px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 20%);
@@ -151,7 +151,7 @@ main .highlights .back-circle {
   position: absolute;
   background-color: #f9f9f9;
   width: 600px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   left: -40%;
   top: 0;
@@ -209,7 +209,7 @@ main .centers h1 {
 main .centers .center-img {
   display: block;
   width: 280px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   background: url(./images/center.png) no-repeat 50% / cover;
   border-radius: 50%;
   margin: 0 auto;

@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* basic */
+body {
+  font-family: "Sora", sans-serif;
+  background-color: black;
+}
+.block {
+  display: block;
+}
+h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.125rem;
+  margin: 0 0 60px 30px;
+}
+
+/***** header *****/
+header {
+  z-index: 9999;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 2.78vw;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+}
+header .name {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+header .menu {
+  transition: 1s;
+  font-size: 1rem;
+}
+header .menu:hover {
+}
+header .menu ul {
+  display: flex;
+}
+header .menu ul li a {
+  padding: 1.25rem;
+}
+
+/***** main *****/
+
+/* first-page */
+main .first-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+main .first-page .header-txt-box {
+  color: #a3a3a3;
+  font-weight: 500;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+main .first-page .header-txt-box h1 {
+  text-transform: uppercase;
+  font-size: 10.42vw;
+  line-height: 9.13vw;
+}
+main .first-page .header-txt-box h1:last-child {
+  margin-left: 11vw;
+}
+main .first-page .bottom-bar {
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .first-page .bottom-bar .github {
+  font-size: 0.833vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  bottom: 4%;
+  left: 2%;
+  transform: translate(40px, -20px);
+}
+main .first-page .bottom-bar .github span {
+  margin-left: 0.26vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.833vw;
+}
+main .first-page .bottom-bar .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 4%;
+  right: 2%;
+  transform: translate(-40px, -20px);
+}
+main .first-page .bottom-bar .down span {
+  font-size: 1.042vw;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+/* project */
+main .project {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  font-size: 5.208vw;
+  font-weight: 500;
+}
+main .project ul {
+  padding: 0 5.208vw;
+}
+main .project ul li {
+  padding: 1.563vw 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+main .project ul li:first-child {
+  border-bottom: none;
+}
+main .project ul li:last-child {
+  border-top: none;
+}
+
+/* skills */
+main .skills {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+}
+main .skills .skills_box {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .skills .skills_box .skills_left {
+  margin-right: 20%;
+}
+main .skills .skills_box .skills_left h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 25px 0;
+  background-color: white;
+}
+main .skills .skills_box .skills_left .skills_circle {
+  display: block;
+  width: 250px;
+  height: 250px;
+  background-color: #e7cccc;
+  border-radius: 50%;
+}
+main .skills .skills_box .skills_right h3 {
+  font-size: 1.042vw;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+main .skills .skills_box .skills_right p {
+  font-size: 0.625vw;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* profile */
+main .profile {
+  width: 100%;
+  height: 83vh;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+}
+main .profile .profile_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: flex-end;
+  width: 80%;
+  display: flex;
+}
+main .profile .profile_box .profile_left {
+  margin-right: 10%;
+}
+main .profile .profile_box .profile_left .profile_circle {
+  display: block;
+  width: 250px;
+  height: 250px;
+  background-color: #777777;
+  border-radius: 50%;
+}
+main .profile .profile_box .profile_right h3 {
+  font-size: 1.042vw;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+main .profile .profile_box .profile_right p {
+  font-size: 0.625vw;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/***** footer *****/
+footer {
+  color: #fff;
+  font-size: 0.938vw;
+}
+footer .footer_box {
+  padding: 1.563vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_box .footer_left {
+  font-weight: 400;
+}
+footer .footer_box .footer_right {
+  font-weight: 500;
+}
+footer .footer_box .footer_left span {
+  margin-right: 1.042vw;
+}
+footer .footer_box .footer_right span {
+  margin-left: 1.042vw;
+}

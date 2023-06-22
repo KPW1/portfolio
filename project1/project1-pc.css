@@ -91,9 +91,6 @@ main .highlights .items .item .item-img img:hover {
 main .highlights .move-line {
   width: 80%;
 }
-main .highlights .move-line span {
-  right: px;
-}
 main .highlights .move-line .move-line2 {
   right: -30%;
   width: 30%;
