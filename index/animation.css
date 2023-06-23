@@ -1,1 +1,12 @@
 @charset "utf-8";
+
+@keyframes menu_ani {
+  0% {
+    background-color: #000000;
+    width: 200px;
+  }
+  100% {
+    background-color: #f58282;
+    border-radius: 50%;
+  }
+}
