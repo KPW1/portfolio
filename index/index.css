@@ -11,7 +11,7 @@ h2 {
   text-transform: uppercase;
   color: white;
   font-size: 3.125rem;
-  margin: 0 0 60px 30px;
+  margin: 0 0 2.604vw 30px;
 }
 #img1 {
   width: 200px;
@@ -32,6 +32,7 @@ header {
 header .name {
   text-transform: uppercase;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 header .header_menu {
   font-size: 1rem;
@@ -43,7 +44,10 @@ header .header_menu ul li a {
   padding: 1.25rem;
 }
 header .header_menu ul li a:hover {
-  animation: menu_ani linear 1s;
+  transition: 0.5s;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 50%;
 }
 /***** main *****/
 
@@ -87,6 +91,21 @@ main .first-page .bottom-bar .github {
   left: 2%;
   transform: translate(40px, -20px);
 }
+main .first-page .bottom-bar .github .github_txt::after {
+  content: "";
+  display: block;
+  width: 0%;
+}
+main .first-page .bottom-bar .github .github_txt:hover::after {
+  content: "";
+  display: block;
+  border: 1px solid white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
 main .first-page .bottom-bar .github span {
   margin-left: 0.26vw;
   display: flex;
@@ -113,6 +132,12 @@ main .first-page .bottom-bar .down span {
   justify-content: center;
   border-radius: 50%;
   background-color: #ddd;
+  transition: 1s;
+}
+main .first-page .bottom-bar .down span:hover {
+  padding: 5px;
+  color: white;
+  background-color: #7700ff;
 }
 
 /* project */
@@ -164,10 +189,11 @@ main .first-page .bottom-bar .down span {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-align: right;
   user-select: none;
   counter-reset: menucounter;
   overflow: hidden;
+  justify-content: flex-end;
+  padding-bottom: 5vh;
 }
 
 .menu__item {
@@ -175,7 +201,6 @@ main .first-page .bottom-bar .down span {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  padding-left: 5rem;
 }
 
 .menu__item::before {
@@ -216,7 +241,7 @@ main .first-page .bottom-bar .down span {
   font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
-  color: white;
+  color: #a3a3a3;
 }
 
 .menu__item-textinner {
@@ -224,7 +249,8 @@ main .first-page .bottom-bar .down span {
 }
 
 .menu__item:hover .menu__item-textinner {
-  color: blue;
+  color: #a3a3a3;
+  opacity: 0.5;
 }
 
 .menu__item-sub {
@@ -265,8 +291,7 @@ main .first-page .bottom-bar .down span {
 
 .hover-reveal {
   position: absolute;
-  z-index: -1;
-  width: 600px;
+  width: 400px;
   height: 400px;
   top: 0;
   left: 0;
@@ -332,12 +357,19 @@ main .first-page .bottom-bar .down span {
     transform: translateY(50%);
   }
   .menu__item {
-    padding-left: 25vw;
+    margin: 0px auto;
+    width: 80%;
     justify-content: initial;
+    padding: 20px 0;
+    border-top: 1px solid white;
+    cursor: pointer;
+  }
+
+  .menu__item:last-child {
+    border-bottom: 1px solid white;
   }
   .menu__item-text {
-    padding: 1vh 0;
-    font-size: 4vw;
+    font-size: 5.208vw;
   }
   .menu__item-sub {
     display: flex;
@@ -359,13 +391,20 @@ main .first-page .bottom-bar .down span {
     padding-left: 25vw;
   }
 }
-
-.menu__item:first-child:hover .hover-reveal {
-  background: url("images/logo_over.png") 50% 30% no-repeat;
+.menu__item:nth-child(2) .hover-reveal {
+  background: url("images/12345.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
-.menu__item:nth-child(2):hover .hover-reveal {
-  background-image: url("https://tympanus.net/Tutorials/RapidImageHoverMenu/1.dc197a9a.jpg");
+.menu__item:nth-child(3):hover .hover-reveal {
+  background: url("images/iphone.png") no-repeat fixed 100% 50% / cover;
+  transition: opacity 0.5s;
+}
+.menu__item:nth-child(4):hover .hover-reveal {
+  background: url("images/p3.png") no-repeat fixed 100% 50% / cover;
+  transition: opacity 0.5s;
+}
+.menu__item:nth-child(5):hover .hover-reveal {
+  background: url("images/p4.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
 /* skills */
@@ -402,6 +441,7 @@ main .skills .skills_box .skills_left .skills_circle {
   height: 250px;
   background-color: #e7cccc;
   border-radius: 50%;
+  animation: circle_ani 5s linear infinite alternate;
 }
 main .skills .skills_box .skills_right {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -484,4 +524,15 @@ footer .footer_box .footer_left span {
 }
 footer .footer_box .footer_right span {
   margin-left: 1.042vw;
+}
+footer .footer_box .footer_right .footer_email:hover {
+  color: #295c00;
+  cursor: url(./images/mail.svg) 20 20, auto;
+}
+footer .footer_box .footer_right a {
+  cursor: default;
+}
+footer .footer_box .footer_right .footer_kakao:hover {
+  color: #f7e600;
+  cursor: url(./images/kakao.svg) 20 20, auto;
 }

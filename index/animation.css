@@ -1,12 +1,22 @@
 @charset "utf-8";
 
-@keyframes menu_ani {
+@keyframes circle_ani {
   0% {
-    background-color: #000000;
-    width: 200px;
+    background: url(images/a1.png) no-repeat 100% 50% / cover;
+  }
+  20% {
+    background: url(images/a1.png) no-repeat 100% 50% / cover;
+  }
+  40% {
+    background: url(images/a2.png) no-repeat 100% 50% / cover;
+  }
+  60% {
+    background: url(images/a2.png) no-repeat 100% 50% / cover;
+  }
+  80% {
+    background: url(images/a3.png) no-repeat 100% 50% / cover;
   }
   100% {
-    background-color: #f58282;
-    border-radius: 50%;
+    background: url(images/a3.png) no-repeat 100% 50% / cover;
   }
 }
