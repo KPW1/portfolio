@@ -142,46 +142,6 @@ main .first-page .bottom-bar .down span:hover {
 
 /* project */
 
-.frame {
-  top: 0;
-  padding: 1rem 1.5rem;
-  position: fixed;
-  z-index: 1000;
-  background: #f0f0f0;
-  width: 100%;
-  display: flex;
-  text-transform: uppercase;
-}
-
-.frame__title {
-  font-size: 1rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-.frame__links {
-  margin: 0.5rem 0;
-}
-
-.frame__links a {
-  border-bottom: 1px solid currentColor;
-  transition: 0.2s border-color;
-}
-
-.frame__links a:hover,
-.frame__links a:focus {
-  border-color: transparent;
-}
-
-.frame__links a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.frame__button {
-  word-spacing: 0.75rem;
-  color: white;
-  margin-left: auto;
-}
 .menu {
   background-color: black;
   width: 100%;
@@ -201,29 +161,6 @@ main .first-page .bottom-bar .down span:hover {
   display: flex;
   justify-content: flex-end;
   position: relative;
-}
-
-.menu__item::before {
-  counter-increment: menucounter;
-  content: counters(menucounter, ".", decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  border-left: 3px solid currentColor;
-  top: 20%;
-  height: 60%;
-  padding-left: 1rem;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateX(-1rem);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.menu__item:hover::before {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .menu__item-text {
@@ -320,77 +257,36 @@ main .first-page .bottom-bar .down span:hover {
   display: none;
 }
 
-.credits {
-  align-self: flex-start;
-  padding: 5rem 0 0 0;
-}
-
-.credits a {
-  text-decoration: underline;
-}
-
 @media screen and (min-width: 53em) {
-  .frame {
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    background: none;
-    height: 50vh;
-    pointer-events: none;
-    padding-bottom: 0;
-  }
-  .frame__links a:not(:last-child) {
-    margin-right: 0;
-  }
-  .frame__links {
-    margin: 0.5rem 0 2rem;
-    justify-self: start;
-  }
-  .frame__links a {
-    margin-left: 0.5rem;
-    pointer-events: auto;
-  }
-  .frame__button {
-    cursor: not-allowed;
-    pointer-events: auto;
-    margin-top: auto;
-    transform: translateY(50%);
-  }
-  .menu__item {
-    margin: 0px auto;
-    width: 80%;
-    justify-content: initial;
-    padding: 20px 0;
-    border-top: 1px solid white;
-    cursor: pointer;
-  }
-
-  .menu__item:last-child {
-    border-bottom: 1px solid white;
-  }
-  .menu__item-text {
-    font-size: 5.208vw;
-  }
-  .menu__item-sub {
-    display: flex;
-  }
+}
+.menu__item {
+  margin: 0px auto;
+  width: 80%;
+  justify-content: initial;
+  padding: 20px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.menu__item:nth-child(3) {
+  border-top: none;
+}
+.menu__item:nth-child(4) {
+  border-top: none;
+}
+.menu__item:nth-child(5) {
+  border-top: none;
+}
+.menu__item:last-child {
+  border-bottom: 1px solid white;
+}
+.menu__item-text {
+  font-size: 5.208vw;
+}
+.menu__item-sub {
+  display: flex;
 }
 
-@media (any-pointer: fine) {
-  .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    pointer-events: none;
-  }
-  .cursor__inner {
-    opacity: 0.3;
-  }
-  .credits {
-    padding-left: 25vw;
-  }
-}
 .menu__item:nth-child(2) .hover-reveal {
   background: url("images/12345.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
@@ -422,7 +318,8 @@ main .skills .skills_box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-70%, -50%);
+  /* flex-direction: row-reverse; */
 }
 main .skills .skills_box .skills_left {
   margin-right: 20%;
@@ -436,14 +333,33 @@ main .skills .skills_box .skills_left h2::after {
   background-color: white;
 }
 main .skills .skills_box .skills_left .skills_circle {
+  position: relative;
   display: block;
   width: 250px;
   height: 250px;
-  background-color: #e7cccc;
+  background-color: black;
   border-radius: 50%;
-  animation: circle_ani 5s linear infinite alternate;
+  overflow: hidden;
+}
+main .skills .skills_box .skills_left .skills_circle .skills_img {
+  display: flex;
+}
+main .skills .skills_box .skills_left .skills_circle .skills_img img {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  transition: 1s;
+}
+main .skills .skills_box .skills_left .skills_circle .skills_img img.active {
+  opacity: 1;
 }
 main .skills .skills_box .skills_right {
+  width: 50%;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -488,7 +404,9 @@ main .profile .profile_box .profile_left .profile_circle {
   display: block;
   width: 250px;
   height: 250px;
-  background-color: #777777;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
   border-radius: 50%;
 }
 main .profile .profile_box .profile_right h3 {

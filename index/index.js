@@ -18,39 +18,34 @@ $(function () {
   $("#date").text(now());
 });
 
-// modules are defined as an array
-// [ module function, map of requires ]
-//
-// map of requires is short require name -> numeric require
-//
-// anything defined in a previous bundle is accessed via the
-// orig method which is the require for previous bundles
+let i = 0;
+function Slide() {
+  $(".skills_circle img").eq(i).removeClass("active");
+  i++; //
+
+  if (i >= $(".skills_circle img").length) {
+    i = 0;
+  }
+  $(".skills_circle img").eq(i).addClass("active");
+}
+
+setInterval(Slide, 2000);
+
 parcelRequire = (function (modules, cache, entry, globalName) {
-  // Save the require from previous bundle to this closure if any
   var previousRequire = typeof parcelRequire === "function" && parcelRequire;
   var nodeRequire = typeof require === "function" && require;
 
   function newRequire(name, jumped) {
     if (!cache[name]) {
       if (!modules[name]) {
-        // if we cannot find the module within our internal map or
-        // cache jump to the current global require ie. the last bundle
-        // that was added to the page.
         var currentRequire =
           typeof parcelRequire === "function" && parcelRequire;
         if (!jumped && currentRequire) {
           return currentRequire(name, true);
         }
-
-        // If there are other bundles on this page the require from the
-        // previous one is saved to 'previousRequire'. Repeat this as
-        // many times as there are bundles until the module is found or
-        // we exhaust the require chain.
         if (previousRequire) {
           return previousRequire(name, true);
         }
-
-        // Try the node require function if it exists.
         if (nodeRequire && typeof name === "string") {
           return nodeRequire(name);
         }
@@ -110,7 +105,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     try {
       newRequire(entry[i]);
     } catch (e) {
-      // Save first error but execute all entries
       if (!error) {
         error = e;
       }
@@ -118,31 +112,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   if (entry.length) {
-    // Expose entry point to Node, AMD or browser globals
-    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
     var mainExports = newRequire(entry[entry.length - 1]);
 
-    // CommonJS
     if (typeof exports === "object" && typeof module !== "undefined") {
       module.exports = mainExports;
-
-      // RequireJS
     } else if (typeof define === "function" && define.amd) {
       define(function () {
         return mainExports;
       });
-
-      // <script>
     } else if (globalName) {
       this[globalName] = mainExports;
     }
   }
 
-  // Override the current require with this new one
   parcelRequire = newRequire;
 
   if (error) {
-    // throw error from earlier, _after updating parcelRequire_
     throw error;
   }
 
@@ -239,17 +224,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
           subClass.prototype.constructor = subClass;
           subClass.__proto__ = superClass;
         }
-        /*!
-         * GSAP 3.3.4
-         * https://greensock.com
-         *
-         * @license Copyright 2008-2020, GreenSock. All rights reserved.
-         * Subject to the terms at https://greensock.com/standard-license or for
-         * Club GreenSock members, the agreement issued with that membership.
-         * @author: Jack Doyle, jack@greensock.com
-         */
-
-        /* eslint-disable */
 
         var _config = {
             autoSleep: 120,
@@ -298,14 +272,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
           },
           _isArray = Array.isArray,
           _strictNumExp = /(?:-?\.?\d|\.)+/gi,
-          //only numbers (including negatives and decimals) but NOT relative values.
           _numExp = /[-+=.]*\d+[.e\-+]*\d*[e\-\+]*\d*/g,
-          //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
           _numWithUnitExp = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g,
           _complexStringNumExp = /[-+=.]*\d+(?:\.|e-|e)*\d*/gi,
-          //duplicate so that while we're looping through matches from exec(), it doesn't contaminate the lastIndex of _numExp which we use to search for colors too.
           _parenthesesExp = /\(([^()]+)\)/i,
-          //finds the string between parentheses.
           _relExp = /[+-]=-?[\.\d]+/,
           _delimitedValueExp = /[#\-+.]*\b[a-z\d-=+%.]+/gi,
           _globalTimeline,
@@ -395,12 +365,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
           _forEachName = function _forEachName(names, func) {
             return (names = names.split(",")).forEach(func) || names;
           },
-          //split a comma-delimited list of names into an array, then run a forEach() function and return the split array (this is just a way to consolidate/shorten some code).
           _round = function _round(value) {
             return Math.round(value * 100000) / 100000 || 0;
           },
           _arrayContainsAny = function _arrayContainsAny(toSearch, toFind) {
-            //searches one array to find matches for any of the items in the toFind array. As soon as one is found, it returns true. It does NOT return all the matches; it's simply a boolean search.
             var l = toFind.length,
               i = 0;
 
@@ -409,7 +377,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
             return i < l;
           },
           _parseVars = function _parseVars(params, type, parent) {
-            //reads the arguments passed to one of the key methods and figures out if the user is defining things with the OLD/legacy syntax where the duration is the 2nd parameter, and then it adjusts things accordingly and spits back the corrected vars object (with the duration added if necessary, as well as runBackwards or startAt or immediateRender). type 0 = to()/staggerTo(), 1 = from()/staggerFrom(), 2 = fromTo()/staggerFromTo()
             var isLegacy = _isNumber(params[1]),
               varsIndex = (isLegacy ? 2 : 1) + (type < 2 ? 0 : 1),
               vars = params[varsIndex],
@@ -425,7 +392,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
               irVars = vars;
 
               while (parent && !("immediateRender" in irVars)) {
-                // inheritance hasn't happened yet, but someone may have set a default in an ancestor timeline. We could do vars.immediateRender = _isNotFalse(_inheritDefaults(vars).immediateRender) but that'd exact a slight performance penalty because _inheritDefaults() also runs in the Tween constructor. We're paying a small kb price here to gain speed.
                 irVars = parent.vars.defaults || {};
                 parent = _isNotFalse(parent.vars.inherit) && parent.parent;
               }
@@ -465,7 +431,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
           ) {
             _lazyTweens.length && _lazyRender();
             animation.render(time, suppressEvents, force);
-            _lazyTweens.length && _lazyRender(); //in case rendering caused any tweens to lazy-init, we should render them because typically when someone calls seek() or time() or progress(), they expect an immediate render.
+            _lazyTweens.length && _lazyRender();
           },
           _numericIfPossible = function _numericIfPossible(value) {
             var n = parseFloat(value);
@@ -688,21 +654,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   Math.abs(animation._ts || animation._rts || _tinyNum) || 0)
             ));
           },
-          /*
-_totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
-	let cycleDuration = duration + repeatDelay,
-		time = _round(clampedTotalTime % cycleDuration);
-	if (time > duration) {
-		time = duration;
-	}
-	return (yoyo && (~~(clampedTotalTime / cycleDuration) & 1)) ? duration - time : time;
-},
-*/
           _postAddChecks = function _postAddChecks(timeline, child) {
             var t;
 
             if (child._time || (child._initted && !child._dur)) {
-              //in case, for example, the _start is moved on a tween that has already rendered. Imagine it's at its end state, then the startTime is moved WAY later (after the end of this timeline), it should render at its beginning.
               t = _parentToChildTotalTime(timeline.rawTime(), child);
 
               if (
@@ -711,26 +666,24 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
               ) {
                 child.render(t, true);
               }
-            } //if the timeline has already ended but the inserted tween/timeline extends the duration, we should enable this timeline again so that it renders properly. We should also align the playhead with the parent timeline's when appropriate.
-
+            }
             if (
               _uncache(timeline)._dp &&
               timeline._initted &&
               timeline._time >= timeline._dur &&
               timeline._ts
             ) {
-              //in case any of the ancestors had completed but should now be enabled...
               if (timeline._dur < timeline.duration()) {
                 t = timeline;
 
                 while (t._dp) {
-                  t.rawTime() >= 0 && t.totalTime(t._tTime); //moves the timeline (shifts its startTime) if necessary, and also enables it. If it's currently zero, though, it may not be scheduled to render until later so there's no need to force it to align with the current playhead position. Only move to catch up with the playhead.
+                  t.rawTime() >= 0 && t.totalTime(t._tTime);
 
                   t = t._dp;
                 }
               }
 
-              timeline._zTime = -_tinyNum; // helps ensure that the next render() will be forced (crossingStart = true in render()), even if the duration hasn't changed (we're adding a child which would need to get rendered). Definitely an edge case. Note: we MUST do this AFTER the loop above where the totalTime() might trigger a render() because this _addToTimeline() method gets called from the Animation constructor, BEFORE tweens even record their targets, etc. so we wouldn't want things to get triggered in the wrong order.
+              timeline._zTime = -_tinyNum;
             }
           },
           _addToTimeline = function _addToTimeline(
@@ -844,10 +797,8 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
               (!totalTime && tween._zTime)
             ) {
               prevIteration = tween._zTime;
-              tween._zTime = totalTime || (suppressEvents ? _tinyNum : 0); // when the playhead arrives at EXACTLY time 0 (right on top) of a zero-duration tween, we need to discern if events are suppressed so that when the playhead moves again (next time), it'll trigger the callback. If events are NOT suppressed, obviously the callback would be triggered in this render. Basically, the callback should fire either when the playhead ARRIVES or LEAVES this exact spot, not both. Imagine doing a timeline.seek(0) and there's a callback that sits at 0. Since events are suppressed on that seek() by default, nothing will fire, but when the playhead moves off of that position, the callback should fire. This behavior is what people intuitively expect.
-
-              suppressEvents || (suppressEvents = totalTime && !prevIteration); // if it was rendered previously at exactly 0 (_zTime) and now the playhead is moving away, DON'T fire callbacks otherwise they'll seem like duplicates.
-
+              tween._zTime = totalTime || (suppressEvents ? _tinyNum : 0);
+              suppressEvents || (suppressEvents = totalTime && !prevIteration);
               tween.ratio = ratio;
               tween._from && (ratio = 1 - ratio);
               tween._time = 0;
@@ -968,7 +919,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                 animation.duration() >= _bigNum
                   ? recent.endTime(false)
                   : animation._dur,
-              //in case there's a child that infinitely repeats, users almost never intend for the insertion point of a new child to be based on a SUPER long value like that so we clip it and assume the most recently-added child's endTime should be used instead.
               i,
               offset;
 
@@ -1067,8 +1017,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
               return 0.5 - Math.random();
             });
           },
-          // alternative that's a bit faster and more reliably diverse but bigger:   for (let j, v, i = a.length; i; j = Math.floor(Math.random() * i), v = a[--i], a[i] = a[j], a[j] = v); return a;
-          //for distributing values across an array. Can accept a number, a function or (most commonly) a function which can contain the following properties: {base, amount, from, ease, grid, axis, length, each}. Returns a function that expects the following parameters: index, target, array. Recognizes the following
           distribute = function distribute(v) {
             if (_isFunction(v)) {
               return v;
@@ -1079,7 +1027,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                 : {
                     each: v,
                   },
-              //n:1 is just to indicate v was a number; we leverage that later to set v according to the length we get. If a number is passed in, we treat it like the old stagger value where 0.1, for example, would mean that things would be distributed with 0.1 between each element in the array rather than a total "amount" that's chunked out among them all.
               ease = _parseEase(vars.ease),
               from = vars.from || 0,
               base = parseFloat(vars.base) || 0,
@@ -1174,12 +1121,11 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
               return (
                 _round(distances.b + (ease ? ease(l) : l) * distances.v) +
                 distances.u
-              ); //round in order to work around floating point errors
+              );
             };
           },
           _roundModifier = function _roundModifier(v) {
-            //pass in 0.1 get a function that'll round to the nearest tenth, or 5 to round to the closest 5, or 0.001 to the closest 1000th, etc.
-            var p = v < 1 ? Math.pow(10, (v + "").length - 2) : 1; //to avoid floating point math errors (like 24 * 0.1 == 2.4000000000000004), we chop off at a specific number of decimal places (much faster than toFixed()
+            var p = v < 1 ? Math.pow(10, (v + "").length - 2) : 1;
 
             return function (raw) {
               return (
@@ -1309,7 +1255,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
             });
           },
           wrap = function wrap(min, max, value) {
-            // NOTE: wrap() CANNOT be an arrow function! A very odd compiling bug causes problems (unrelated to GSAP).
             var range = max - min;
             return _isArray(min)
               ? _wrapArray(min, wrap(0, min.length), max)
@@ -1328,7 +1273,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                 });
           },
           _replaceRandom = function _replaceRandom(value) {
-            //replaces all occurrences of random(...) in a string with the calculated random value. can be a range like random(-100, 100, 5) or an array like random([0, 100, 500])
             var prev = 0,
               s = "",
               i,
@@ -1388,7 +1332,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                 il = l - 2;
 
                 for (i = 1; i < l; i++) {
-                  interpolators.push(interpolate(start[i - 1], start[i])); //build the interpolators up front as a performance optimization so that when the function is called many times, it can just reuse them.
+                  interpolators.push(interpolate(start[i - 1], start[i]));
                 }
 
                 l--;
@@ -1458,7 +1402,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
 
             params = v[type + "Params"];
             scope = v.callbackScope || animation;
-            executeLazyFirst && _lazyTweens.length && _lazyRender(); //in case rendering caused any tweens to lazy-init, we should render them because typically when a timeline finishes, users expect things to have rendered fully. Imagine an onUpdate on a timeline that reports/checks tweened values.
+            executeLazyFirst && _lazyTweens.length && _lazyRender();
 
             return params
               ? callback.apply(scope, params)
@@ -1758,7 +1702,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
           _colorExp = (function () {
             var s =
                 "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b",
-              //we'll dynamically build this Regular Expression to conserve file size. After building it, it will be able to find rgb(), rgba(), # (hexadecimal), and named color values like red, blue, purple, etc.,
               p;
 
             for (p in _colorLookup) {
@@ -1821,7 +1764,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                   dispatch = 1;
                 }
 
-                manual || (_id = _req(_tick)); //make sure the request is made before we dispatch the "tick" event so that timing is maintained. Otherwise, if processing the "tick" requires a bunch of time (like 15ms) and we're using a setTimeout() that's based on 16.7ms, it'd technically take 31.7ms between frames otherwise.
+                manual || (_id = _req(_tick));
 
                 dispatch &&
                   _listeners.forEach(function (l) {
@@ -1901,18 +1844,10 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
           _wake = function _wake() {
             return !_tickerActive && _ticker.wake();
           },
-          //also ensures the core classes are initialized.
-
-          /*
-           * -------------------------------------------------
-           * EASING
-           * -------------------------------------------------
-           */
           _easeMap = {},
           _customEaseExp = /^[\d.\-M][\d.\-,\s]/,
           _quotesExp = /["']/g,
           _parseObjectInString = function _parseObjectInString(value) {
-            //takes a string like "{wiggles:10, type:anticipate})" and turns it into a real object. Notice it ends in ")" and includes the {} wrappers. This is because we only use this function for parsing ease configs and prioritized optimization rather than reusability.
             var obj = {},
               split = value.substr(1, value.length - 3).split(":"),
               key = split[0],
@@ -1935,7 +1870,6 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
             return obj;
           },
           _configEaseFromString = function _configEaseFromString(name) {
-            //name can be a string like "elastic.out(1,0.5)", and pass in _easeMap as obj and it'll parse it out and call the actual function like _easeMap.Elastic.easeOut.config(1,0.5). It will also parse custom ease strings as long as CustomEase is loaded and registered (internally as _easeMap._CE).
             var split = (name + "").split("("),
               ease = _easeMap[split[0]];
             return ease && split.length > 1 && ease.config
@@ -2094,19 +2028,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
             };
 
             return ease;
-          }; // a cheaper (kb and cpu) but more mild way to get a parameterized weighted ease by feeding in a value between -1 (easeIn) and 1 (easeOut) where 0 is linear.
-        // _weightedEase = ratio => {
-        // 	let y = 0.5 + ratio / 2;
-        // 	return p => (2 * (1 - p) * p * y + p * p);
-        // },
-        // a stronger (but more expensive kb/cpu) parameterized weighted ease that lets you feed in a value between -1 (easeIn) and 1 (easeOut) where 0 is linear.
-        // _weightedEaseStrong = ratio => {
-        // 	ratio = .5 + ratio / 2;
-        // 	let o = 1 / 3 * (ratio < .5 ? ratio : 1 - ratio),
-        // 		b = ratio - o,
-        // 		c = ratio + o;
-        // 	return p => p === 1 ? p : 3 * b * (1 - p) * (1 - p) * p + 3 * c * (1 - p) * p * p + p * p * p;
-        // };
+          };
 
         exports._ticker = _ticker;
         exports._colorStringFilter = _colorStringFilter;
@@ -2357,8 +2279,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
 
               _setEnd(this);
 
-              parent._dirty || _uncache(parent); //for performance improvement. If the parent's cache is already dirty, it already took care of marking the ancestors as dirty too, so skip the function call here.
-              //in case any of the ancestor timelines had completed but should now be enabled, we should reset their totalTime() which will also ensure that they're lined up properly and enabled. Skip for animations that are on the root (wasteful). Example: a TimelineLite.exportRoot() is performed when there's a paused tween on the root, the export will not complete until that tween is unpaused, but imagine a child gets restarted later, after all [unpaused] tweens have completed. The start of that child would get pushed out, but one of the ancestors may have completed.
+              parent._dirty || _uncache(parent);
 
               while (parent.parent) {
                 if (
@@ -2469,11 +2390,10 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
             var tTime =
               this.parent && this._ts
                 ? _parentToChildTotalTime(this.parent._time, this)
-                : this._tTime; // make sure to do the parentToChildTotalTime() BEFORE setting the new _ts because the old one must be used in that calculation.
-            // prioritize rendering where the parent's playhead lines up instead of this._tTime because there could be a tween that's animating another tween's timeScale in the same rendering loop (same parent), thus if the timeScale tween renders first, it would alter _start BEFORE _tTime was set on that tick (in the rendering loop), effectively freezing it until the timeScale tween finishes.
+                : this._tTime;
 
             this._rts = +value || 0;
-            this._ts = this._ps || value === -_tinyNum ? 0 : this._rts; // _ts is the functional timeScale which would be 0 if the animation is paused.
+            this._ts = this._ps || value === -_tinyNum ? 0 : this._rts;
 
             return _recacheAncestors(
               this.totalTime(_clamp(0, this._tDur, tTime), true)
@@ -2490,13 +2410,13 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
 
               if (value) {
                 this._pTime =
-                  this._tTime || Math.max(-this._delay, this.rawTime()); // if the pause occurs during the delay phase, make sure that's factored in when resuming.
+                  this._tTime || Math.max(-this._delay, this.rawTime());
 
-                this._ts = this._act = 0; // _ts is the functional timeScale, so a paused tween would effectively have a timeScale of 0. We record the "real" timeScale as _rts (recorded time scale)
+                this._ts = this._act = 0;
               } else {
                 _wake();
 
-                this._ts = this._rts; //only defer to _pTime (pauseTime) if tTime is zero. Remember, someone could pause() an animation, then scrub the playhead and resume(). If the parent doesn't have smoothChildTiming, we render at the rawTime() because the startTime won't get updated.
+                this._ts = this._rts;
 
                 this.totalTime(
                   this.parent && !this.parent.smoothChildTiming
@@ -2505,7 +2425,7 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
                   this.progress() === 1 &&
                     (this._tTime -= _tinyNum) &&
                     Math.abs(this._zTime) !== _tinyNum
-                ); // edge case: animation.progress(1).pause().play() wouldn't render again because the playhead is already at the end, but the call to totalTime() below will add it back to its parent...and not remove it again (since removing only happens upon rendering at a new time). Offsetting the _tTime slightly is done simply to cause the final render in totalTime() that'll pop it off its timeline (if autoRemoveChildren is true, of course). Check to make sure _zTime isn't -_tinyNum to avoid an edge case where the playhead is pushed to the end but INSIDE a tween/callback, the timeline itself is paused thus halting rendering and leaving a few unrendered. When resuming, it wouldn't render those otherwise.
+                );
               }
             }
 

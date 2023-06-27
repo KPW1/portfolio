@@ -1,22 +1,13 @@
 @charset "utf-8";
 
-@keyframes circle_ani {
+@keyframes gradient {
   0% {
-    background: url(images/a1.png) no-repeat 100% 50% / cover;
+    background-position: 0% 50%;
   }
-  20% {
-    background: url(images/a1.png) no-repeat 100% 50% / cover;
-  }
-  40% {
-    background: url(images/a2.png) no-repeat 100% 50% / cover;
-  }
-  60% {
-    background: url(images/a2.png) no-repeat 100% 50% / cover;
-  }
-  80% {
-    background: url(images/a3.png) no-repeat 100% 50% / cover;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background: url(images/a3.png) no-repeat 100% 50% / cover;
+    background-position: 0% 50%;
   }
 }
