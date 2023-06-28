@@ -7,6 +7,28 @@ body {
 .block {
   display: block;
 }
+.find-me {
+  display: flex;
+}
+.find-me li {
+  list-style: none;
+  padding-right: 2em;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.scroll {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #c0392b;
+}
+
 h2 {
   text-transform: uppercase;
   color: white;
@@ -47,7 +69,7 @@ header .header_menu ul li a:hover {
   transition: 0.5s;
   background-color: #ffffff;
   color: black;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 /***** main *****/
 
@@ -164,6 +186,7 @@ main .first-page .bottom-bar .down span:hover {
 }
 
 .menu__item-text {
+  width: 100%;
   position: relative;
   cursor: pointer;
   padding: 0.5rem;
@@ -171,9 +194,13 @@ main .first-page .bottom-bar .down span:hover {
   overflow: hidden;
   font-size: 6vw;
 }
-
+.menu_right {
+  padding-right: 20px;
+}
 .menu__item-textinner {
-  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -186,10 +213,14 @@ main .first-page .bottom-bar .down span:hover {
 }
 
 .menu__item:hover .menu__item-textinner {
+  transition: 0.4s;
+  margin-left: 20px;
   color: #a3a3a3;
   opacity: 0.5;
 }
-
+.menu__item:hover .menu__item-textinner .menu_right {
+  margin-right: 20px;
+}
 .menu__item-sub {
   display: none;
   text-transform: uppercase;
@@ -287,7 +318,7 @@ main .first-page .bottom-bar .down span:hover {
   display: flex;
 }
 
-.menu__item:nth-child(2) .hover-reveal {
+.menu__item:nth-child(2):hover .hover-reveal {
   background: url("images/12345.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
