@@ -334,6 +334,7 @@ main .first-page .bottom-bar .down span:hover {
   background: url("images/p4.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
+
 /* skills */
 main .skills {
   width: 100%;

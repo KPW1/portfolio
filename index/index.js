@@ -1,3 +1,4 @@
+// footer date
 function now() {
   let now = new Date();
   let today = "";
@@ -18,6 +19,7 @@ $(function () {
   $("#date").text(now());
 });
 
+// skills slide
 let i = 0;
 function Slide() {
   $(".skills_circle img").eq(i).removeClass("active");
@@ -31,6 +33,7 @@ function Slide() {
 
 setInterval(Slide, 2000);
 
+// project mouse event
 $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 0 && $(this).scrollTop() <= 400) {
