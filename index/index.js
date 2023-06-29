@@ -89,11 +89,11 @@ $(".btn4").on("click", (e) => {
 });
 
 // locomotive
-(function () {
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-  });
-})();
+// (function () {
+//   const scroll = new LocomotiveScroll({
+//     el: document.querySelector("[data-scroll-container]"),
+//   });
+// })();
 
 // ---------------
 parcelRequire = (function (modules, cache, entry, globalName) {
