@@ -30,7 +30,11 @@
     <!-- style -->
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="index.css">
+    <!-- jQuery -->
     <script src="../common/style/jquery-3.7.0.min.js"></script>
+    <script src="../common/style/locomotive-scroll.min.js"></script>
+    <script src="../common/style/locomotive-scroll.min.css"></script>
+    <!-- js -->
     <script defer src="./index.js"></script>
     <!-- aos -->
     <title>포트폴리오</title>
@@ -41,15 +45,15 @@
         <span class="name">pyeong woo</span>
         <span class="header_menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#profile">Profile</a></li>
+                <li><a href="#home" class="btn1">Home</a></li>
+                <li><a href="#project" class="btn2">Project</a></li>
+                <li><a href="#skills" class="btn3">Skills</a></li>
+                <li><a href="#profile" class="btn4">Profile</a></li>
             </ul>
         </span>
     </header>
     <main>
-        <div class="first-page" id="home">
+        <div class="first-page home" id="home">
             <div class="header-txt-box">
                 <h1 data-aos="fade-up" data-aos-duration="1000">product</h1>
                 <h1 data-aos="fade-up" data-aos-duration="1500">designer</h1>
@@ -128,25 +132,23 @@
             <circle class="cursor__inner" cx="20" cy="20" r="10"></circle>
         </svg>
 
-        <div class="skills " id="skills" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <div class="skills " id="skills" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+            data-scroll-container>
             <div class="skills_box">
                 <div class="skills_left">
                     <h2>skills</h2>
-                    <span class="skills_circle">
-                        <div class="skills_img">
-                            <img src="./images/ht.png" alt="img1" class="active">
-                            <img src="./images/js.png" alt="img2">
-                            <img src="./images/ps.png" alt="img3">
-
-                        </div>
-                    </span>
+                    <div class="skills_img">
+                        <img src="./images/ht.png" alt="img1" class="active">
+                        <img src="./images/js.png" alt="img2">
+                        <img src="./images/ps.png" alt="img3">
+                    </div>
                 </div>
                 <div class="skills_right" data-aos="fade-left">
                     <span class=" html">
                         <h3>HTML5 & CSS3</h3>
                         <p>웹 접근성을 고려한 시맨틱 태그 <span class="block"></span>
                             미디어 쿼리를 이용한 반응형 웹 개발<span class="block"></span>
-                            Flex, Grid, Position을 이용한 레이아웃 설정<span class="block"></span>
+                            Flex, Grid, Position을 이용한 레이아웃 구현<span class="block"></span>
                             CSS를 이용한 Animation 구현
                         </p>
                     </span>

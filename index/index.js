@@ -14,21 +14,20 @@ function now() {
   today = `${hour}:${min} ${AM} KST`;
   return today;
 }
-
-$(function () {
+setInterval(() => {
   $("#date").text(now());
-});
+}, 1000);
 
 // skills slide
 let i = 0;
 function Slide() {
-  $(".skills_circle img").eq(i).removeClass("active");
+  $(".skills_img img").eq(i).removeClass("active");
   i++; //
 
-  if (i >= $(".skills_circle img").length) {
+  if (i >= $(".skills_img img").length) {
     i = 0;
   }
-  $(".skills_circle img").eq(i).addClass("active");
+  $(".skills_img img").eq(i).addClass("active");
 }
 
 setInterval(Slide, 2000);
@@ -49,6 +48,52 @@ $(function () {
     }
   });
 });
+
+// scroll event
+const btn1 = document.querySelector("btn1");
+const btn2 = document.querySelector("btn2");
+const btn3 = document.querySelector("btn3");
+const btn4 = document.querySelector("btn4");
+
+$(".btn1").on("click", (e) => {
+  e.preventDefault();
+  const home = $(".home").offset().top;
+  scrollTo({
+    top: home,
+    behavior: "smooth",
+  });
+});
+$(".btn2").on("click", (e) => {
+  e.preventDefault();
+  const menu = $(".menu").offset().top;
+  scrollTo({
+    top: menu,
+    behavior: "smooth",
+  });
+});
+$(".btn3").on("click", (e) => {
+  e.preventDefault();
+  const skills = $(".skills").offset().top;
+  scrollTo({
+    top: skills,
+    behavior: "smooth",
+  });
+});
+$(".btn4").on("click", (e) => {
+  e.preventDefault();
+  const profile = $(".profile").offset().top;
+  scrollTo({
+    top: profile,
+    behavior: "smooth",
+  });
+});
+
+// locomotive
+(function () {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+  });
+})();
 
 // ---------------
 parcelRequire = (function (modules, cache, entry, globalName) {
