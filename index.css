@@ -726,7 +726,7 @@ main .profile .profile_box .profile_right p {
 }
 .git_main{ 
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 20px;
   border: 1px solid black;
   border-radius: 30px;
   padding: 10px 20px;
@@ -735,14 +735,14 @@ main .profile .profile_box .profile_right p {
   background-color: black;
 }
 .git_pf{
-  font-size: 30px;
+  font-size: 20px;
   border: 1px solid black;
   border-radius: 30px;
   padding: 10px 20px;
   color: white;
   background-color: black;
   position: absolute;
-  bottom: -100px;
+  bottom: -80px;
   left: 0;
 }
 .git_main:hover {
@@ -759,7 +759,7 @@ main .profile .profile_box .profile_right p {
 .git_box {
   z-index: 99;
   top:50%;
-  left: 5%;
+  left: 20%;
   position: absolute;
   width: 600px;
 }
