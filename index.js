@@ -171,7 +171,15 @@ $(".btn4").on("click", (e) => {
   }, 1000);
 });
 
-
+$('footer').find('a').on('click', (e) => {
+  e.preventDefault();
+});
+$('.footer_kakao').on('click', () => {
+  $('.kakao_page').addClass('active');
+})
+$('.kakao_close').on('click', () => {
+  $('.kakao_page').removeClass('active');
+})
 // ---------------
 parcelRequire = (function (modules, cache, entry, globalName) {
   var previousRequire = typeof parcelRequire === "function" && parcelRequire;

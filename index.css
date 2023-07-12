@@ -508,6 +508,7 @@ footer {
   font-size: 0.938vw;
 }
 footer .footer_box {
+  position: relative;
   padding: 1.563vw;
   width: 100%;
   display: flex;
@@ -529,20 +530,56 @@ footer .footer_box .footer_right .footer_email:hover {
   color: #295c00;
   cursor: url(./images/mail.svg) 20 20, auto;
 }
+footer .footer_box .footer_right .footer_kakao {
+  position: relative;
+}
 footer .footer_box .footer_right .footer_kakao:hover {
   color: #f7e600;
   cursor: url(./images/kakao.svg) 20 20, auto;
 }
 footer .footer_box .footer_right .git_main:hover {
-  color: black;
+  color: #333;
   cursor: url(./images/git2.svg) 20 20, auto;
 }
 footer .footer_box .footer_right .git_pf:hover {
-  color: black;
+  color: #333;
   cursor: url(./images/git1.svg) 20 20, auto;
 }
-
-
+footer .footer_box .footer_right .kakao_page {
+  display: block;
+  background-color: white;
+  position: absolute;
+  bottom: 100%;
+  right: 1%;
+  width: 350px;
+  height: 450px;
+  border: 1px solid black;
+  transition: 1s;
+  opacity: 0;
+}
+footer .footer_box .footer_right .kakao_page.active {
+  opacity: 1;
+}
+footer .footer_box .footer_right .kakao_page:hover {
+  color: black;
+}
+footer .footer_box .footer_right .kakao_page img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -45%);
+  width: 300px;
+}
+footer .footer_box .footer_right .kakao_page .kakao_close {
+  cursor: pointer;
+  position: absolute;
+  font-size: 40px;
+  right: 5%;
+  top: 3%;
+}
+footer .footer_box .footer_right .kakao_page .kakao_close:hover {
+  color:#f7e600;
+}
 
 .happyrun {
   top: 50%;
