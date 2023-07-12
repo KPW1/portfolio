@@ -526,7 +526,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   top: 50%;
   left: 50%;
   position: absolute;
-  background-color: #ddd;
+  background-color: black;
   width: 60%;
   height: 80vh;
   transform: translate(-50%,-40%);
@@ -536,6 +536,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   /* display: none; */
   opacity: 0;
   pointer-events: none;
+  border: 1px solid white;
 }
 .happyrun.active {
   opacity: 1;
@@ -548,6 +549,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   font-size: 60px;
   margin: 20px;
   cursor: pointer;
+  color: white;
 }
 .happyrun .run1 {
   position: absolute;
@@ -564,6 +566,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   width: 250px;
 }
 .happyrun .before {
+  color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -574,6 +577,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   width: 250px;
 }
 .happyrun .after {
+  color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -588,8 +592,8 @@ footer .footer_box .footer_right .footer_kakao:hover {
   font-size: 30px;
   width: 200px;
   height: 100px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   position: absolute;
   right: 10%;
   bottom: 20%;
@@ -601,5 +605,5 @@ footer .footer_box .footer_right .footer_kakao:hover {
 }
 .happyrun .more_btn:hover{
   color: black;
-  background-color: white;
+  background-color: rgb(54, 54, 54);
 }
