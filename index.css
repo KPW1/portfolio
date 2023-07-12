@@ -2,12 +2,13 @@
 /* basic */
 body {
   font-family: "Sora", sans-serif;
-  background: linear-gradient(#000, #23a6d5);
+  background: #000;
+  transition: 3s;
   /* background-color: black; */
 }
 body.active {
   color: black;
-  background: linear-gradient(#23a6d5, #080808);
+  background: #222222;
   /* background-color: white; */
 }
 .block {
@@ -517,4 +518,88 @@ footer .footer_box .footer_right a {
 footer .footer_box .footer_right .footer_kakao:hover {
   color: #f7e600;
   cursor: url(./images/kakao.svg) 20 20, auto;
+}
+
+
+
+.happyrun {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: #ddd;
+  width: 60%;
+  height: 80vh;
+  transform: translate(-50%,-40%);
+  border-radius: 20px;
+  z-index: 99;
+  transition: 1s;
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+}
+.happyrun.active {
+  opacity: 1;
+  display: block;
+  pointer-events: visible;
+}
+.happyrun .happyrun_close {
+  position: absolute;
+  right: 0;
+  font-size: 60px;
+  margin: 20px;
+  cursor: pointer;
+}
+.happyrun .run1 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 250px;
+}
+.happyrun .run2 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+  width: 250px;
+}
+.happyrun .before {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  position: absolute;
+  top: 10%;
+  left: 14%;
+  transform: translateY(-0%);
+  width: 250px;
+}
+.happyrun .after {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  transform: translateY(-0%);
+  width: 250px;
+}
+
+.happyrun .more_btn {
+  font-size: 30px;
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.happyrun .more_btn:hover{
+  color: black;
+  background-color: white;
 }

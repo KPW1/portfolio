@@ -109,6 +109,17 @@ addEventListener("scroll", () => {
   }
 });
 
+$('.happyrun_btn').on('click', () => {
+  $('.happyrun').addClass('active');
+}) 
+
+$('.happyrun_close').on('click', () =>{
+  $('.happyrun').removeClass('active');
+})
+
+$('.more_btn').on('click', () => {
+  $('.more_btn').attr({ href: './teamproject.pdf', 'target': '_blank' });
+})
 // locomotive
 // (function () {
 //   const scroll = new LocomotiveScroll({
