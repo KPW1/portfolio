@@ -171,7 +171,7 @@ $(".btn4").on("click", (e) => {
   }, 1000);
 });
 
-$('footer').find('a').on('click', (e) => {
+$('footer').find('.footer_kakao').on('click', (e) => {
   e.preventDefault();
 });
 $('.footer_kakao').on('click', () => {
