@@ -98,16 +98,24 @@ const body = document.querySelector("body");
 //     $("body").removeClass("active");
 //   }
 // });
-const profile = document.querySelector(".skills");
+const profile = document.querySelector(".profile");
 addEventListener("scroll", () => {
   const center = profile.offsetTop;
+  console.log(scrollY);
   console.log(center);
-  if (scrollY > center) {
+  if (scrollY > center-200) {
     document.body.classList.add("active");
   } else {
     document.body.classList.remove("active");
   }
 });
+
+$('.name').on('click', () => {
+  scrollTo({
+    top:0,
+    behavior:"smooth"
+  })
+})
 
 $('.happyrun_btn').on('click', () => {
   $('.happyrun').addClass('active');
@@ -126,6 +134,31 @@ $('.more_btn').on('click', () => {
 //     el: document.querySelector("[data-scroll-container]"),
 //   });
 // })();
+
+let prevScroll = window.scrollY;
+$(window).on('scroll', () => {
+  // 스크롤시 변수에 저장
+  let currentScroll = window.scrollY;
+  console.log('currentScroll: ', currentScroll);
+  console.log('1 prevScroll: ', prevScroll);
+
+  // 이전 스크롤 값이 크면 true, 스크롤을 올리면 header 보임
+  if (prevScroll > currentScroll) {
+    // $('header').show();
+    $('header').css({ top: 0 });
+  } else {// 이후 스크롤 값이 크면 false, 스크롤을 내리면 header 숨김
+    // $('header').hide();
+    $('header').css({ top: -100 });
+  }
+
+  // prev에 현재 스크롤 값 대입
+  prevScroll = currentScroll;
+  console.log('2 prevScroll: ', prevScroll);
+
+});
+
+
+
 
 // ---------------
 parcelRequire = (function (modules, cache, entry, globalName) {
