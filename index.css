@@ -529,9 +529,6 @@ footer .footer_box .footer_right .footer_email:hover {
   color: #295c00;
   cursor: url(./images/mail.svg) 20 20, auto;
 }
-footer .footer_box .footer_right a {
-  /* cursor: default; */
-}
 footer .footer_box .footer_right .footer_kakao:hover {
   color: #f7e600;
   cursor: url(./images/kakao.svg) 20 20, auto;
@@ -637,7 +634,7 @@ footer .footer_box .footer_right .footer_kakao:hover {
   }
   100% {
     background-position: 0% 50%;
-  }
+  } 
 }
 
 @keyframes gradient2 {
