@@ -9318,73 +9318,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                 );
               },
             },
-            {
-              key: "checkScroll",
-              value: function checkScroll() {
-                var _this2 = this;
 
-                _get(
-                  _getPrototypeOf(_default.prototype),
-                  "checkScroll",
-                  this
-                ).call(this);
-
-                if (this.getDirection) {
-                  this.addDirection();
-                }
-
-                if (this.getSpeed) {
-                  this.addSpeed();
-                  this.timestamp = Date.now();
-                }
-
-                this.instance.scroll.y = window.pageYOffset;
-
-                if (this.els.length) {
-                  if (!this.hasScrollTicking) {
-                    requestAnimationFrame(function () {
-                      _this2.detectElements();
-                    });
-                    this.hasScrollTicking = true;
-                  }
-                }
-              },
-            },
-            {
-              key: "addDirection",
-              value: function addDirection() {
-                if (window.pageYOffset > this.instance.scroll.y) {
-                  if (this.instance.direction !== "down") {
-                    this.instance.direction = "down";
-                  }
-                } else if (window.pageYOffset < this.instance.scroll.y) {
-                  if (this.instance.direction !== "up") {
-                    this.instance.direction = "up";
-                  }
-                }
-              },
-            },
-            {
-              key: "addSpeed",
-              value: function addSpeed() {
-                if (window.pageYOffset != this.instance.scroll.y) {
-                  this.instance.speed =
-                    (window.pageYOffset - this.instance.scroll.y) /
-                    (Date.now() - this.timestamp);
-                } else {
-                  this.instance.speed = 0;
-                }
-              },
-            },
-            {
-              key: "resize",
-              value: function resize() {
-                if (this.els.length) {
-                  this.windowHeight = window.innerHeight;
-                  this.updateElements();
-                }
-              },
-            },
             {
               key: "addElements",
               value: function addElements() {
@@ -9392,7 +9326,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
                 this.els = [];
                 var els = this.el.querySelectorAll("[data-" + this.name + "]");
-                els.forEach(function (el, id) {
+                els.forEach(function (el, id) { 
                   var cl = el.dataset[_this3.name + "Class"] || _this3["class"];
 
                   var top =
@@ -12162,23 +12096,6 @@ object-assign
   null
 );
 
-document.documentElement.className = "js";
-
-var supportsCssVars = function supportsCssVars() {
-  var e,
-    t = document.createElement("style");
-  return (
-    (t.innerHTML = "root: { --tmp-var: bold; }"),
-    document.head.appendChild(t),
-    (e = !!(
-      window.CSS &&
-      window.CSS.supports &&
-      window.CSS.supports("font-weight", "var(--tmp-var)")
-    )),
-    t.parentNode.removeChild(t),
-    e
-  );
-};
 
 supportsCssVars() ||
   alert(

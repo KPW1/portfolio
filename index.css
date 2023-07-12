@@ -533,6 +533,14 @@ footer .footer_box .footer_right .footer_kakao:hover {
   color: #f7e600;
   cursor: url(./images/kakao.svg) 20 20, auto;
 }
+footer .footer_box .footer_right .git_main:hover {
+  color: black;
+  cursor: url(./images/git2.svg) 20 20, auto;
+}
+footer .footer_box .footer_right .git_pf:hover {
+  color: black;
+  cursor: url(./images/git1.svg) 20 20, auto;
+}
 
 
 
