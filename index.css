@@ -3,7 +3,7 @@
 body {
   font-family: "Sora", sans-serif;
   background: #000;
-  transition: 3s;
+  transition: 2s;
   /* background-color: black; */
 }
 body.active {
