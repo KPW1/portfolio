@@ -49,44 +49,7 @@ $(function () {
   });
 });
 
-// scroll event
-const btn1 = document.querySelector("btn1");
-const btn2 = document.querySelector("btn2");
-const btn3 = document.querySelector("btn3");
-const btn4 = document.querySelector("btn4");
 
-$(".btn1").on("click", (e) => {
-  e.preventDefault();
-  const home = $(".home").offset().top;
-  scrollTo({
-    top: home,
-    behavior: "smooth",
-  });
-});
-$(".btn2").on("click", (e) => {
-  e.preventDefault();
-  const menu = $(".menu").offset().top;
-  scrollTo({
-    top: menu,
-    behavior: "smooth",
-  });
-});
-$(".btn3").on("click", (e) => {
-  e.preventDefault();
-  const skills = $(".skills").offset().top;
-  scrollTo({
-    top: skills,
-    behavior: "smooth",
-  });
-});
-$(".btn4").on("click", (e) => {
-  e.preventDefault();
-  const profile = $(".profile").offset().top;
-  scrollTo({
-    top: profile,
-    behavior: "smooth",
-  });
-});
 const body = document.querySelector("body");
 // $(window).on("scroll", () => {
 //   const footer = $(".profile").offset().top - 500;
@@ -101,8 +64,8 @@ const body = document.querySelector("body");
 const profile = document.querySelector(".profile");
 addEventListener("scroll", () => {
   const center = profile.offsetTop;
-  console.log(scrollY);
-  console.log(center);
+  // console.log(scrollY);
+  // console.log(center);
   if (scrollY > center-200) {
     document.body.classList.add("active");
   } else {
@@ -135,18 +98,78 @@ $('.more_btn').on('click', () => {
 //   });
 // })();
 
-let prevScroll = window.scrollY;
-$(window).on('scroll', () => {
-  let currentScroll = window.scrollY;
-  if (prevScroll > currentScroll) {
-    $('header').css({ top: 0 });
-  } else {
-    $('header').css({ top: -100 });
-  }
-  prevScroll = currentScroll;
+
+
+
+  let prevScroll = window.scrollY;
+
+
+  
+ $(window).on('scroll', () => {
+    let currentScroll = window.scrollY;
+    if (prevScroll > currentScroll) {
+      $('header').css({ top: 0 });
+    } else {
+      $('header').css({ top: -100 });
+    }
+    prevScroll = currentScroll;
+  });
+
+
+
+
+
+
+// scroll event
+const btn1 = document.querySelector("btn1");
+const btn2 = document.querySelector("btn2");
+const btn3 = document.querySelector("btn3");
+const btn4 = document.querySelector("btn4");
+
+$(".btn1").on("click", (e) => {
+  e.preventDefault();
+  const home = $(".home").offset().top;
+  scrollTo({
+    top: home,
+    behavior: "smooth",
+  });
+  setTimeout(() => {
+    $('header').css({top:0});
+  }, 1000);
 });
-
-
+$(".btn2").on("click", (e) => {
+  e.preventDefault();
+  const menu = $(".menu").offset().top;
+  scrollTo({
+    top: menu,
+    behavior: "smooth",
+  });
+  setTimeout(() => {
+    $('header').css({top:0});
+  }, 1000);
+});
+$(".btn3").on("click", (e) => {
+  e.preventDefault();
+  const skills = $(".skills").offset().top;
+  scrollTo({
+    top: skills,
+    behavior: "smooth",
+  });
+  setTimeout(() => {
+    $('header').css({top:0});
+  }, 1000);
+});
+$(".btn4").on("click", (e) => {
+  e.preventDefault();
+  const profile = $(".profile").offset().top;
+  scrollTo({
+    top: profile,
+    behavior: "smooth",
+  });
+  setTimeout(() => {
+    $('header').css({top:0});
+  }, 1000);
+});
 
 
 // ---------------
@@ -12096,8 +12119,3 @@ object-assign
   null
 );
 
-
-supportsCssVars() ||
-  alert(
-    "Please view this demo in a modern browser that supports CSS Variables."
-  );
