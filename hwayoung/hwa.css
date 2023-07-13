@@ -135,7 +135,7 @@ main .edu h3 {
 }
 main .edu h4 {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 34px;
   margin-bottom: 40px;
 }
 main .edu h5 {
@@ -152,9 +152,9 @@ main .edu p {
   BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
   "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 main .edu1 .text-box-right p:nth-child(2) {
   margin-bottom: 80px;
@@ -222,7 +222,7 @@ main .edu3 {
   BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
   "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
 }
