@@ -1,0 +1,267 @@
+@charset "utf-8";
+/***** basic *****/
+body {
+  font-family: "Sora", sans-serif;
+  background: #000;
+  transition: 2s;
+}
+.block {
+  display: block;
+}
+h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.125rem;
+  margin: 0 0 2.604vw 30px;
+}
+/***** header *****/
+header {
+  z-index: 9999;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 1.5rem 2.78vw;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+  align-items: center;
+  transition: 1s;
+}
+header .name {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+header .header_menu {
+  font-size: 1rem;
+}
+header .header_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header_menu ul li {
+  display: flex;
+}
+header .header_menu ul li a {
+  position: relative;
+  margin: 0 1.25rem;
+}
+header .header_menu ul li a:after {
+  content: "";
+  display: block;
+  width: 0%;
+}
+header .header_menu ul li a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: -18%;
+  left: 0;
+  transition: 0.2s;
+}
+
+
+
+/***** main *****/
+
+main .first-page {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+main .first-page .header-txt-box {
+  z-index: 999;
+  color: #a3a3a3;
+  font-weight: 500;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+main .first-page .header-txt-box h1 {
+  z-index: 999;
+  text-transform: uppercase;
+  font-size: 9.42vw;
+  line-height: 9.13vw;
+  margin-left: 11vw;
+}
+
+main .img-wrapper {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+main .img-wrapper img {
+  width: 820px;
+  height: 350px;
+  margin-right: 40px;
+  border: 5px solid #a3a3a3;
+}
+main .img-wrapper .tabimg {
+  width: 450px;
+  height: 350px;
+}
+main .img-wrapper .mobimg {
+  width: 250px;
+}
+main .img-wrapper ul {
+  display: flex;
+}
+
+main .edu {
+  color: #fff;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+main .edu h3 {
+  font-weight: 700;
+  font-size: 50px;
+}
+main .edu h4 {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+main .edu h5 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-bottom: 40px;
+}
+main .edu .text-box-right {
+  width: 800px;
+}
+main .edu p {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+main .edu1 .text-box-right p:nth-child(2) {
+  margin-bottom: 80px;
+}
+main .edu2 .text-box-right p:nth-child(2) {
+  margin-bottom: 80px;
+}
+main .edu2 .text-box-right p:nth-child(6) {
+  margin-bottom: 60px;
+}
+main .edu3 .text-box-right p:nth-child(5) {
+  margin-bottom: 60px;
+}
+main .edu2 .color-bar {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  width: 350px;
+  height: 35px;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+}
+main .edu2 .color-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+main .edu2 .gray1 {
+  background-color: #999999;
+}
+main .edu2 .gray2 {
+  color: white;
+  background-color: #313131;
+}
+main .edu2 .black {
+  color: white;
+  background-color: #000000;
+}
+main .edu2 .red0 {
+  background-color: #ED3022;
+}
+main .edu2 .red1 {
+  background-color: #D70F00;
+}
+
+table th{
+  padding: 10px;
+  font-size: 20px;
+}
+table td {
+  padding: 20px;
+}
+
+main .edu3 {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+main .edu3 ul li {
+  list-style: circle;
+  margin: 10px 0;
+}
+main .edu3 ul {
+  margin-bottom: 80px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+footer a {
+  position: absolute;
+  left: auto;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  width: 250px;
+  height: 70px;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+footer a .arrow {
+  font-size: 30px;
+}
+footer a:hover {
+  background-color: #a3a3a3;
+  color: white;
+}

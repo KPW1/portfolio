@@ -43,10 +43,7 @@ body.active .profile .git_pf {
   list-style: none;
   padding-right: 2em;
 }
-body {
-  padding: 0;
-  margin: 0;
-}
+
 .scroll {
   width: 100%;
   height: 500px;
