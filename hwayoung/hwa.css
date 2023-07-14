@@ -106,8 +106,8 @@ main .img-wrapper {
 
 main .img-wrapper img {
   position: absolute;
-  width: 800px;
-  /* height: ; */
+  width: auto;
+  height: 500px;
   margin-right: 40px;
   border: 5px solid #a3a3a3;
   border-radius: 20px;
@@ -117,15 +117,13 @@ main .img-wrapper img {
 }
 main .img-wrapper .tabimg {
   z-index: 99;
-  width: 400px;
-  /* height: 320px; */
-  transform: translate(-10%,-67%);
+  height: 400px;
+  transform: translate(-20%,-62%);
 }
 main .img-wrapper .mobimg {
   z-index: 999;
-  width: 150px;
-  height: 270px;
-  transform: translate(200%,-61%);
+  height: 350px;
+  transform: translate(220%,-56%);
 }
 main .img-wrapper ul {
   display: flex;
