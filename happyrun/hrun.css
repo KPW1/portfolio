@@ -1,0 +1,70 @@
+@charset "utf-8";
+/***** basic *****/
+body {
+  font-family: "Sora", sans-serif;
+  background: #000;
+  transition: 2s;
+}
+.block {
+  display: block;
+}
+h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.125rem;
+  margin: 0 0 2.604vw 30px;
+}
+/***** header *****/
+header {
+  z-index: 9999;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 1.5rem 2.78vw;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+  align-items: center;
+  transition: 1s;
+}
+header .name {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+header .header_menu {
+  font-size: 1rem;
+}
+header .header_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header_menu ul li {
+  display: flex;
+}
+header .header_menu ul li a {
+  position: relative;
+  margin: 0 1.25rem;
+}
+header .header_menu ul li a:after {
+  content: "";
+  display: block;
+  width: 0%;
+}
+header .header_menu ul li a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: -18%;
+  left: 0;
+  transition: 0.2s;
+}
+
+

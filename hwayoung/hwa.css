@@ -83,8 +83,8 @@ main .first-page .header-txt-box {
   color: #a3a3a3;
   font-weight: 500;
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 31%;
+  left: 35%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -97,23 +97,25 @@ main .first-page .header-txt-box h1 {
 }
 
 main .img-wrapper {
+  width: 50%;
+  height: 50%;
+  z-index: 9999;
   position: absolute;
-  bottom: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-
+  transform: translate(-50%,-10%);
+  /* background-color: white; */
 }
 
 main .img-wrapper img {
   position: absolute;
   width: auto;
   height: 500px;
-  margin-right: 40px;
-  border: 5px solid #a3a3a3;
+  border: 5px solid #ddd;
   border-radius: 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-70%,-70%);
+  transform: translate(-59%,-70%);
 }
 main .img-wrapper .tabimg {
   z-index: 99;
@@ -123,7 +125,7 @@ main .img-wrapper .tabimg {
 main .img-wrapper .mobimg {
   z-index: 999;
   height: 350px;
-  transform: translate(220%,-56%);
+  transform: translate(207%,-56%);
 }
 main .img-wrapper ul {
   display: flex;
