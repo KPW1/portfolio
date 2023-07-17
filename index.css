@@ -644,6 +644,7 @@ footer .footer_box .footer_right .kakao_page .kakao_close:hover {
 }
 
 .happyrun {
+  display: none;
   top: 50%;
   left: 50%;
   position: absolute;
@@ -654,12 +655,12 @@ footer .footer_box .footer_right .kakao_page .kakao_close:hover {
   border-radius: 20px;
   z-index: 99;
   transition: 1s;
-  /* display: none; */
   opacity: 0;
   pointer-events: none;
   border: 1px solid white;
 }
 .happyrun.active {
+  display: none;
   opacity: 1;
   display: block;
   pointer-events: visible;
