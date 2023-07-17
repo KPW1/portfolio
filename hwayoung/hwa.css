@@ -254,8 +254,6 @@ footer a {
   right: 20px;
   bottom: 20px;
   display: block;
-  width: 250px;
-  height: 70px;
   background-color: white;
   border-radius: 40px;
   display: flex;
@@ -266,7 +264,8 @@ footer a {
   "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 footer a .arrow {
   font-size: 30px;
