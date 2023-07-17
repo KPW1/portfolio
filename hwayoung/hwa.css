@@ -237,14 +237,14 @@ main .edu3 {
   line-height: 1.4;
 }
 main .edu3 ul li {
-  list-style: circle;
+  list-style: circle inside;
   margin: 10px 0;
 }
 main .edu3 ul {
   margin-bottom: 80px;
 }
 
-footer {
+footer {  
   position: relative;
   bottom: 0;
 }

@@ -155,6 +155,7 @@ main .app h5 {
   margin-bottom: 40px;
 }
 main .app .text-box-right {
+  padding-top: 20px;
   width: 800px;
 }
 main .app p {
@@ -206,6 +207,10 @@ main .app3 ul {
   display: block;
   line-height: 2;
 }
+
+main .app3 .text-box-right {
+  width: 700px;
+}
 main .app4 ul li{
   list-style: circle inside;
 }
@@ -215,9 +220,15 @@ main .app4 ul {
   line-height: 2;
   display: block;
 }
-
+main .app4 .text-box-right {
+  width: 700px;
+}
 main .app5 p {
   font-size: 40px;
+}
+main .app5 .text-box-right {
+  width: 700px;
+  padding: 0;
 }
 main .app6 h6 {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -291,7 +302,7 @@ main .app7 h3 {
   margin-bottom: 80px;
 }
 main .app7 img {
-  width: 161px;
+  width: 181px;
 }
 main .app7 figcaption {
   margin-top: 10px;
