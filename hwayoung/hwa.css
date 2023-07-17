@@ -244,15 +244,17 @@ main .edu3 ul {
   margin-bottom: 80px;
 }
 
-footer {  
+
+footer {
   position: relative;
-  bottom: 0;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
+
 footer a {
-  position: absolute;
-  left: auto;
-  right: 20px;
-  bottom: 20px;
+  margin-left: 40px;
   display: block;
   background-color: white;
   border-radius: 40px;
@@ -266,11 +268,10 @@ footer a {
   font-weight: 700;
   font-size: 20px;
   padding: 10px 20px;
-}
-footer a .arrow {
-  font-size: 30px;
+  border: transparent 1px solid;
 }
 footer a:hover {
-  background-color: #a3a3a3;
+  background-color: black;
   color: white;
+  border: 1px solid #fff;
 }
