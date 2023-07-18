@@ -83,7 +83,7 @@ main .first-page .header-txt-box {
   color: #a3a3a3;
   font-weight: 500;
   position: absolute;
-  top: 31%;
+  top: 25%;
   left: 35%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -101,7 +101,7 @@ main .img-wrapper {
   height: 50%;
   z-index: 9999;
   position: absolute;
-  top: 50%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%,-10%);
   /* background-color: white; */
