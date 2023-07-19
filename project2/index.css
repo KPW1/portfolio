@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FCF3EB;
+}
+.block {
+  display: block;
+}
+
+header {
+  z-index: 9999;
+  display: flex;
+  width: 95%;
+  height: 50px;
+  background-color: var(--header-bg);
+  position: fixed;
+  padding: 1rem 2rem;
+  top:2%;
+  left: 50%;
+  transform: translate(-50%,0);
+  border-radius: 40px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--header-color);
+}
+
+header .header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header-left .menu {
+  /* background-color: red; */
+  margin-right: 1.6875rem;
+  position: relative;
+  width: 2.0625rem;
+  height: 50px;
+}
+header .header-left .menu span {
+  z-index: 99;
+  position: absolute;
+  background-color: var(--header-color);
+  width: 2.0625rem;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+header .header-left .menu span:nth-child(2){
+  top: 30%;
+}
+header .header-left .menu span:last-child{
+  top: 70%;
+}
+header .header-center{
+  width: 150px;
+  position:absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main {
+  padding-top: 110px;
+}
+
+main .page1 {
+  width: 100%;
+  height: 120vh;
+  background-color: #FCF3EB;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+main .page1 .img-wrapper img {
+  position: absolute;
+  width: 70px;
+}
+
+
+main .page1 .img-wrapper img:first-child {
+  width: 80px;
+  top: 5%;
+  left: 15%;
+}
+main .page1 .img-wrapper img:nth-child(2) {
+  top: 14%;
+  left: 10%;
+}
+main .page1 .img-wrapper img:nth-child(3) {
+  width: 140px;
+  top: 5%;
+  right: 27%;
+}
+main .page1 .img-wrapper img:nth-child(4) {
+  width: 120px;
+  top: 3%;
+  right: 5%;
+}
+main .page1 .img-wrapper img:nth-child(5){
+  width: 80px;
+  top: 35%;
+  right: 0;
+}
+main .page1 .img-wrapper img:nth-child(6){
+  width: 130px;
+  top: 45%;
+  left: 6%;
+}
+main .page1 .img-wrapper img:nth-child(7){
+  width: 100px;
+  top: 58%;
+  right: 17%;
+}
+main .page1 .img-wrapper img:nth-child(8){
+  width: 100px;
+  top: 63%;
+  left: 12%;
+}
+main .page1 .img-wrapper img:nth-child(9){
+  width: 130px;
+  bottom: 0%;
+  right: 8%;
+}
+main .page1 .img-wrapper img:nth-child(10) {
+  width: 50px;
+  top: 34%;
+  left: 14%;
+}
+main .page1 .img-wrapper .star {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  animation: star-ani 2s 2s linear infinite alternate;
+}
+main .page1 .img-wrapper .star2 {
+  position: absolute;
+  right: 17%;
+  top: 4%;
+  animation: star-ani 2s linear infinite alternate;
+}
+@keyframes star-ani {
+  from { transform: scale(0);}
+  to { transform: scale(100%);} 
+}
+
+main .page1 .img-wrapper .star3 {
+position: absolute;
+right: 9%;
+top: 32%;
+}
+main .page1 .img-wrapper .circle {
+  position: absolute;
+  right: 1.5%;
+  top: 11%;
+  width: 40px;
+}
+main .page1 .text-wrapper {
+  line-height: 1.1;
+  position: absolute;
+  font-size: 80px;
+  font-weight: 900;
+  color: #214B2A;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-210%);
+}
+main .page .text-wrapper .line {
+  width: 300px;
+}
+main .page1 .text-wrapper .line::before {
+content: "";
+display: block;
+background-color: #9ac918;
+position: absolute;
+bottom: -6%;
+left: 0;
+width: 300px;
+height: 11px;
+transform: rotate(-0.5deg);
+}
+main .page1 .text-wrapper2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-110%);
+  color: #214B2A;
+}
+main .page1 .img-box {
+  position: absolute;
+  bottom: 0;
+  width: 1250px;
+  height: 310px;
+  border-radius: 33px;
+  background-color: #e0aff9;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+main .page1 .img-box img{
+  position: absolute;
+  width: 600px;
+  bottom: -75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: box-ani 2s linear alternate infinite;
+}
+@keyframes box-ani {
+  from {transform: translate(-50%,4%);}
+  to{ transform: translate(-50%, 0);}
+}
