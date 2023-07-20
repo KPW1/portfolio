@@ -16,10 +16,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <script src='../common/style/jquery-3.7.0.min.js'></script>
-  <script src="./gsap.js"></script>
-  <script src="./scrollmagic.js"></script>
+  <script defer src='../common/style/jquery-3.7.0.min.js'></script>
+  <script defer src="./gsap.js"></script>
+  <script defer src="./scrollmagic.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="../common/style/swiper-bundle.min.js"></script>
   <script defer src="./index.js"></script>
   <title>Aha! Alive</title>
@@ -43,7 +44,7 @@
   </header>
   <main class="viewport"> 
     <div class="scroll-container">
-    <div class="page1">
+    <div class="page1 panel">
       <div class="img-wrapper">
         <img src="./images/Fill_1_80x (1).png" alt="" class="l1">
         <img src="./images/leaf-2_70x.png" alt="" class="l2">
@@ -105,8 +106,8 @@
         <img src='./images/big.png' alt="">
       </div>
     </div>
-    <div class="page2">
-      <!-- <div class="bgi"> <img src="./images/Romaine_Truchas_and_Breen3_12.13.22-min.webp" alt=""></div> -->
+    <div class="page2 panel">
+      <img src="./images/Romaine_Truchas_and_Breen3_12.13.22-min.webp" alt="" class="bg">
       <div class="text-wrapper">
         <p>Our greens are alive for the <span class="block"></span>
         <span class="text-card"><img src="./images/ti1.jpg" alt=""></span> ultimate freshness  <span class="block"></span>
@@ -118,7 +119,7 @@
         </p>
       </div>
     </div>
-    <div class="page3">
+    <div class="page3 panel bg">
       <h1>Harvest at&nbsp;<span class="line"> Home </span></h1>
       <div class="swiper-back">
       <div class="swiper mySwiper">
@@ -220,7 +221,81 @@
     <div class="page4">
       <h1>It's &nbsp;<span class="line">Alive!</span>
       <span class="little">(not in a Scary Way)</span></h1>
-      asdsadsd
+      <div class="content-box">
+        <h4>Our story begins in a vertical farm, where each plant receives exactly what it needs to flourish.</h4>
+        <div class="video-box">
+          <video src="https://cdn.shopify.com/videos/c/vp/e66503b9c7f94584998013edd6202f64/e66503b9c7f94584998013edd6202f64.HD-1080p-7.2Mbps-11672271.mp4" playsinline muted loop autoplay></video>
+        </div>
+        <span class="little2">*than greenhouse and field-grown greens</span>
+
+        <svg width="50px" height="54px" viewBox="0 0 50 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="star1">
+          <title>F2318C20-CEF4-4182-88E6-62648AADEEF7@1x</title>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Home-Page" transform="translate(-300.000000, -4442.000000)" fill="#214B2A">
+                  <g id="Group" transform="translate(300.920310, 4442.476659)">
+                      <path d="M4.55634919,4.55634919 C7.92949983,7.19342616 11.4983278,8.51196465 15.2628332,8.51196465 C19.0273385,8.51196465 22.7918438,7.19342616 26.5563492,4.55634919 C24.1149496,8.61437055 22.8942497,12.4767146 22.8942497,16.1433812 C22.8942497,19.8100479 24.1149496,23.2810372 26.5563492,26.5563492 C23.5745532,24.3106269 20.0057252,23.1877658 15.8498652,23.1877658 C11.6940052,23.1877658 7.92949983,24.3106269 4.55634919,26.5563492 C6.60639412,23.3788759 7.63141658,19.9078866 7.63141658,16.1433812 C7.63141658,12.3788759 6.60639412,8.51653188 4.55634919,4.55634919 Z" id="Rectangle-Copy-17" transform="translate(15.556349, 15.556349) rotate(-315.000000) translate(-15.556349, -15.556349) "></path>
+                      <circle id="Oval-Copy-12" cx="43.5796898" cy="48.0233406" r="5.5"></circle>
+                  </g>
+              </g>
+          </g>
+      </svg>
+      <svg width="42px" height="37px" viewBox="0 0 42 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="star2">
+        <title>6F5F0331-6491-4BEB-A9E7-8CDAE5505604@1x</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Home-Page" transform="translate(-1059.000000, -4424.000000)" fill="#214B2A">
+                <g id="Group-24" transform="translate(1059.000000, 4424.000000)">
+                    <path d="M24.4766594,19.3761543 C26.6232098,21.0542942 28.8942822,21.8933642 31.2898765,21.8933642 C33.6854708,21.8933642 36.0810651,21.0542942 38.4766594,19.3761543 C36.9230415,21.9585316 36.1462325,24.4163869 36.1462325,26.7497202 C36.1462325,29.0830535 36.9230415,31.2918649 38.4766594,33.3761543 C36.5791529,31.9470583 34.3080805,31.2325103 31.6634423,31.2325103 C29.0188041,31.2325103 26.6232098,31.9470583 24.4766594,33.3761543 C25.7812334,31.3541259 26.4335205,29.1453145 26.4335205,26.7497202 C26.4335205,24.3541259 25.7812334,21.8962706 24.4766594,19.3761543 Z" id="Rectangle-Copy-12" transform="translate(31.476659, 26.376154) rotate(-315.000000) translate(-31.476659, -26.376154) "></path>
+                    <circle id="Oval-Copy-15" cx="3" cy="3" r="3"></circle>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <svg width="38px" height="44px" viewBox="0 0 38 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="star3">
+      <title>17C26136-2F11-488D-ACB2-8F0D11A101A2@1x</title>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Home-Page" transform="translate(-1072.000000, -5062.000000)" fill="#214B2A">
+              <g id="Group-25" transform="translate(1072.000000, 5062.476659)">
+                  <path d="M10.4766594,4.55634919 C13.84981,7.19342616 17.418638,8.51196465 21.1831434,8.51196465 C24.9476487,8.51196465 28.7121541,7.19342616 32.4766594,4.55634919 C30.0352598,8.61437055 28.81456,12.4767146 28.81456,16.1433812 C28.81456,19.8100479 30.0352598,23.2810372 32.4766594,26.5563492 C29.4948635,24.3106269 25.9260355,23.1877658 21.7701754,23.1877658 C17.6143154,23.1877658 13.84981,24.3106269 10.4766594,26.5563492 C12.5267043,23.3788759 13.5517268,19.9078866 13.5517268,16.1433812 C13.5517268,12.3788759 12.5267043,8.51653188 10.4766594,4.55634919 Z" id="Rectangle-Copy-18" transform="translate(21.476659, 15.556349) rotate(-315.000000) translate(-21.476659, -15.556349) "></path>
+                  <circle id="Oval-Copy-16" cx="3" cy="40.5233406" r="3"></circle>
+              </g>
+          </g>
+      </g>
+  </svg>
+  <div class="text-box box1">
+    <h3>Safe Grown</h3>
+    <p>We rely on science-y <span class="block"></span>
+       automation, so plants<span class="block"></span> don’t come into contact <span class="block"></span>with humans or<span class="block"></span> pathogens.</p>
+  </div>
+  <div class="text-box box2">
+    <h3>Alive in Growing <span class="block"></span> Pod</h3>
+    <p>Each plant is rooted in a <span class="block"></span>
+      growing pod, so that it’s<span class="block"></span>still alive and flourishing<span class="block"></span>when you get it home.</p>
+  </div>
+  <div class="text-box box3">
+    <h3>Twice the vitamin <span class="block"></span> C and A*</h3>
+    <p>The vitamins within <span class="block"></span>
+      plants begin to degrade<span class="block"></span>as soon as they’re cut</p>
+  </div>
+      </div>
+      <svg width="92px" height="95px" viewBox="0 0 92 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="arrow">
+        <title>3CC11E4E-3827-4AD7-BEBA-9EC2FFE323FE</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+            <g id="Recipes" transform="translate(-1022.000000, -674.000000)" fill="#FCEBD9">
+                <path d="M1069.34406,675.34406 L1115.34406,721.34406 L1069.34406,767.34406 L1069.34394,732.18706 L1020.65594,732.187728 L1020.65594,710.187728 L1069.34394,710.18706 L1069.34406,675.34406 Z" id="Combined-Shape-Copy" transform="translate(1068.000000, 721.344060) rotate(-270.000000) translate(-1068.000000, -721.344060) "></path>
+            </g>
+        </g>
+    </svg>
+    </div>
+   
+    <div class="page5">
+      <h1>Our&nbsp; <span class="line">Lettuce</span> &nbsp;Keeps</h1>
+      <h1>Growing -&nbsp; <span class="line">Literally</span></h1>
+      <div class="content-box">
+        <p>
+          As other market greens begin to decay, Aha! Alive’s harvest-ready produce continues to flourish. Our greens stay fresh 3x longer than those greenhouse and field grown.
+        </p>
+      </div>
+
     </div>
   </div>
  
