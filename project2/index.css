@@ -3,7 +3,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #FCF3EB;
-  scroll-behavior: smooth;
 }
 .block {
   display: block;
@@ -472,4 +471,32 @@ opacity: 0;
   background-color: #214B2A;
   position: absolute;
   left: 0;
+}
+
+.scroll-container {  
+  position: absolute;  
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+overflow: hidden;
+transform-style: preserve-3d;
+}
+.viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+main {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
