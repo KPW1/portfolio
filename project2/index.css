@@ -799,6 +799,9 @@ main .page6 .right img {
   border-radius: 35px;
 }
 
+main .page7 {
+  padding-bottom: 70px;
+}
 main .page7 .page7-wrapper {
   border-radius: 40px;
   width: 90%;
@@ -848,6 +851,7 @@ main .page8 {
   padding-bottom: 100px;
 }
 main .page8 h1 {
+  padding: 0;
   font-size: 80px;
 }
 main .page8 p {
@@ -1018,7 +1022,7 @@ main footer .footer-menu li a {
  }
  main footer .footer-last p {
   margin: 0;
-  margin-left: 24px;
+  margin-left: 20px;
   font-size: 14px;
   color: #214B2A;
   width: auto;
