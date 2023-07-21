@@ -1,5 +1,5 @@
 $(window).on('scroll', () => {
-  if(scrollY > 100) {
+  if(scrollY > 50) {
     $('header').addClass('active');
   }else{
     $('header').removeClass('active');
@@ -175,7 +175,7 @@ var html = document.documentElement;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  let movementFactor = 1.3; // controls how much the backgrounds move. It's a percentage of the section's height. This can be negative if you want to move in the other direction.
+  let movementFactor = 0.7; // controls how much the backgrounds move. It's a percentage of the section's height. This can be negative if you want to move in the other direction.
   let backgrounds = gsap.utils.toArray("div .bg");
   
   backgrounds.forEach((img, i) => {
@@ -187,13 +187,13 @@ var html = document.documentElement;
       // the first image (i === 0) should be handled differently because it should start at the very top.
       // use function-based values in order to keep things responsive
       gsap.fromTo(img, {
-        y: () => i ? -movementFactor * 0.5 * img.parentNode.offsetHeight : 300
+        y: () => i ? -movementFactor * 0.5 * img.parentNode.offsetHeight : 0
       }, {
         y: () => movementFactor * 0.5 * img.parentNode.offsetHeight,
         ease: "none",
         scrollTrigger: {
           trigger: img.parentNode,
-          start: () => i ? "top bottom" : "-1px top", 
+          start: () => i ? "top bottom" : "-900px top", 
           end: "bottom top",
           scrub: true,
           invalidateOnRefresh: true // to make it responsive
@@ -214,5 +214,5 @@ var html = document.documentElement;
         scale = Math.max(sx, sy),
         w = Math.ceil(img.naturalWidth * scale),
         h = Math.ceil(img.naturalHeight * scale);
-    gsap.set(img, {width: w, height: h, top: Math.ceil((img.parentNode.offsetHeight - h)), left: Math.ceil((img.parentNode.offsetWidth - w) / 2), position: "absolute"});
+    gsap.set(img, {width: w, height: h, top: Math.ceil(-450), left: Math.ceil((img.parentNode.offsetWidth - w) / 2), position: "absolute"});
   }
