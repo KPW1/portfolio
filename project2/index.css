@@ -69,7 +69,7 @@ h1 {
 header {
   z-index: 9999;
   display: flex;
-  width: 95%;
+  width: 0;
   height: 50px;
   background-color: var(--header-bg);
   position: fixed;
@@ -84,6 +84,9 @@ header {
   font-weight: 500;
   color: var(--header-color);
   transition: 1s;
+}
+header.open {
+  width: 95%
 }
 header.active {
   width: 98%;
@@ -140,6 +143,41 @@ main {
   padding-top: 110px;
 }
 
+main .page1 .line::before {
+  width: 0;
+  transition: 1s ease;
+}
+main .page1 .line.active::before {
+width: 100%;
+}
+main .page1 .first,.first-1,.first-2 {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(280%);
+  transition: 0.4s;
+}
+main .page1 .first-1 {
+  transition: 0.5s;
+}
+main .page1 .first-2 {
+  transition: 0.6s;
+}
+main .page1 .second {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(280%);
+  transition: 0.4s;
+}
+main .page1 .first.active,.first-1.active,.first-2.active,
+main .page1 .second.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page1 .second {
+  transition: 1s;
+}
+
+
 main .page1 {
   width: 100%;
   height: 120vh;
@@ -152,6 +190,8 @@ main .page1 {
 main .page1 .img-wrapper img {
   position: absolute;
   width: 70px;
+  transform: scale(0%);
+  transition: 0.7s;
 }
 
 main .page1 .img-wrapper img:first-child {
@@ -256,20 +296,30 @@ main .page1 .text-wrapper2 {
 main .page1 .img-box {
   position: absolute;
   bottom: 0;
-  width: 1250px;
+  width: 0px;
   height: 310px;
   border-radius: 33px;
   background-color: #e0aff9;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%,0); 
+  transition: 1s;
+}
+main .page1 .img-box.active {
+  width: 1250px;
+  height: 310px;
+  transform: translate(-50%,0) scale(100%);
+}
+main .page1 .img-box img.active {
+  bottom: -75%;
 }
 main .page1 .img-box img{
+  transition: 1s;
   position: absolute;
   width: 600px;
-  bottom: -75%;
+  bottom: -300%;
   left: 50%;
   transform: translate(-50%, 0);
-  animation: box-ani 5s linear alternate infinite;
+  animation: box-ani 4s linear alternate infinite;
 }
 @keyframes box-ani {
   from {transform: translate(-50%,3%);}
@@ -388,6 +438,15 @@ background-color: #fef5ec;
 box-shadow:
 0.875rem 0 0.5625rem #00000024;
 z-index: 22;
+}
+.swiper-pagination-bullet1,.swiper-pagination-bullet2 {
+  transition: 1s;
+  position: relative;
+  transform: translateX(-200%);
+}
+.swiper-pagination-bullet1.active,.swiper-pagination-bullet2.active {
+  position: relative;
+  transform: translateX(0%);
 }
 .swiper-pagination .swiper-pagination-bullet:nth-of-type(1){
   z-index: 66;
@@ -883,7 +942,7 @@ main .page8 .img-wrapper ul {
   margin: auto;
 }
 main .page8 .img-wrapper ul li {
-  width: 33.3333%;
+  width: 32%;
 }
 main .page8 .img-wrapper ul li p {
   width:63%;
