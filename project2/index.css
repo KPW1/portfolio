@@ -374,12 +374,29 @@ main .page3 {
   width: 100%;
   background-color: #9AC918;
 }
+main .page3 h1 {
+  display: flex;
+  justify-content:center;
+    opacity: 0;
+    transform: translateY(280%);
+    transition: 0.4s;
+}
+main .page3 h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page3 h1 .line.active::before {
+  width: 100%;
+  bottom: 10%;
+  background-color: #fef5ec;
+}
 main .page3 .line {
   position: relative;
 }
 main .page3 .line::before {
-  width: 100%;
-  bottom: 10%;
+  transition: 1s ease;
+  width: 0%;
+  /* bottom: -50%; */
   background-color: #fef5ec;
 } 
 

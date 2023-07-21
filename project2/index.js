@@ -20,8 +20,24 @@ $(document).ready(function() {
 })
 
 
+const test = document.querySelector('.page3 h1')
+const test2 = document.querySelector('.page2')
 
 $(window).on('scroll', () => {
+  console.log( 'scrollY'+ ':' + scrollY)
+  let a = test2.offsetHeight
+  let b = test.offsetTop
+  let c = b-a;
+  // console.log(test2.offsetHeight)
+  // console.log(test.offsetTop)
+  console.log(c)
+  if(scrollY> c) {
+    $('.page3').find('h1').addClass('active')
+    setTimeout(() => {
+      $('.page3').find('h1').find('.line').addClass('active')
+    }, 700);
+  }
+  // console.log(scrollY);
   if(scrollY > 50) {
     $('header').addClass('active');
   }else{
@@ -29,6 +45,9 @@ $(window).on('scroll', () => {
   }
 });
 
+if(scrollY > $('.page3').find('h1').offset().top) {
+  $('.page3').find('h1').addClass('active');
+}
 // $(document).ready(function() {
 //   $('html').smoothWheel()
 // });
