@@ -27,6 +27,11 @@ h1 {
   background: rgba(0,0,0,0.3);
   border-radius: 10px;
 }
+.button:hover {
+  cursor: pointer;
+  background-color: #FF9A4A !important;
+  transform: scale(105%);
+}
 .line {
   position: relative;
 }
@@ -526,11 +531,8 @@ z-index: 22;
   align-items: center;
   border-radius: 20px;
   color: #214B2A;
-  background-color: #FF9A4A;
-  font-weight: 500;
-}
-.swiper .left .button-box .find {
   background-color: #9AC918;
+  font-weight: 500;
 }
 .swiper .left img {
   position: absolute;
@@ -1279,3 +1281,6 @@ main footer .footer-menu li a {
   margin: 0 0 0 auto;
   width: unset;
  }
+
+
+ mai
