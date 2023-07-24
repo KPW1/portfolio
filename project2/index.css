@@ -1,13 +1,5 @@
 @charset "utf-8";
-.viewport {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+
 main {
   position: relative;
   width: 100%;
@@ -150,7 +142,9 @@ main .page1 .line::before {
 main .page1 .line.active::before {
 width: 100%;
 }
-main .page1 .first,.first-1,.first-2 {
+main .page1 .first,
+main .page1 .first-1,
+main .page1 .first-2 {
   display: inline-block;
   opacity: 0;
   transform: translateY(280%);
@@ -168,7 +162,9 @@ main .page1 .second {
   transform: translateY(280%);
   transition: 0.4s;
 }
-main .page1 .first.active,.first-1.active,.first-2.active,
+main .page1 .first.active,
+main .page1 .first-1.active,
+main .page1 .first-2.active,
 main .page1 .second.active {
   opacity: 1;
   transform: translateY(0);
@@ -185,7 +181,6 @@ main .page1 {
   position: relative;
   overflow: hidden;
   margin-bottom: 180px;
-  margin-top: 90px;
 }
 main .page1 .img-wrapper img {
   position: absolute;
@@ -590,7 +585,12 @@ opacity: 0;
   color: #9AC918;
   background-color: #214B2A;
   position: absolute;
-  right: 0;
+  right: -500px;
+  transition: 1s;
+}
+.swiper-button-next.active {
+  position: absolute;
+  right: 0px;
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
   width: 52px;
@@ -635,19 +635,45 @@ opacity: 0;
 main .page4 h1 {
   font-size: 80px;
 }
+main .page4 .first-1,
+main .page4 .first-2 {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(280%);
+}
+
+main .page4 .first-1.active {
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page4 .first-2.active {
+  transition: 0.7s;
+  opacity: 1;
+  transform: translateY(0);
+}
 main .page4 .line::before {
-  width: 100%;
-  bottom: 10%;
+  width: 0%;
+  bottom: 7%;
   background-color: #fef5ec;
   transform: rotate(1deg);
+  transition: 0.5s;
 } 
+main .page4 .line.active::before {
+  width: 100%;
+}
 main .page4 h1 .little {
   font-weight: 700;
   font-size: 14px;
   position: absolute;
-  bottom: -6%;
+  bottom: -10%;
   left: 50%;
+  transform: scale(0);
+  transition: 0.5s;
 }
+main .page4 h1 .little.active {
+  transform: scale(100%);
+} 
 
 main .page4 .content-box {
   position: relative;
@@ -660,8 +686,9 @@ main .page4 .content-box {
 }
 main .page4 .content-box h4 {
   width: 600px;
-  margin: 30px auto 40px;
+  margin: 60px auto 40px;
   font-weight: 500;
+  font-size: 22px;
 }
 main .page4 .video-box {
   width: 520px;
@@ -702,6 +729,14 @@ main .page4 .content-box .text-box {
   padding: 14px 26px;
   background-color: #fef5ec;
   text-align: left;
+  transform: scale(0);
+  transition: 1s;
+}
+
+.space {height: 120px;}
+.space.v2 {height: 1000px;}
+main .page4 .content-box .text-box.active {
+  transform: scale(100%);
 }
 main .page4 .content-box .text-box h3 {
   font-weight: 700;
@@ -910,20 +945,36 @@ main .page7 .page7-wrapper {
   margin: 40px auto;
   height: 90vh;
   transition: 1s;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 main .page7 .page7-wrapper .text-box {
-  position: absolute;
-  top: 0;
-  left: 10%;
+  position: sticky;
+  top: 15%;
+  left: 5%;
   background-color: #214B2A;
   padding: 28px 44px;
   width: 507px;
   border-radius: 20px;
   height: 550px;  
+  transition: 1s;
+}
+main .page7 .page7-wrapper .text-box.active {
+  left: 10%;
+}
+main .page7 .box {
+  height: 100%;
+  padding: 2%;
 }
 main .page7 video {
+  /* position: absolute; */
   width: 100%;
+}
+main .page7 .video-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 main .page7 h2 {
