@@ -18,11 +18,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://db.onlinewebfonts.com/c/612152298ba7721bc6a303e30e98a952?family=KG+Empire+of+Dirt" rel="stylesheet">
 
-  <script defer src='../common/style/jquery-3.7.0.min.js'></script>
+  <script src='../common/style/jquery-3.7.0.min.js'></script>
+  <script type="text/javascript" src="./jquery.easeScroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
   <script defer src="./gsap.js"></script>
-  <!-- <script defer src="./scrollmagic.js"></script> -->
+  <script defer src="./scrollmagic.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="../common/style/swiper-bundle.min.js"></script>
@@ -47,8 +49,9 @@
     </div>
   </header>
   <main> 
-
-    <div class="page1 panel">
+    <div data-scroll>
+      <div data-scroll-content>
+   <div class="page1 panel">
       <div class="img-wrapper">
         <img src="./images/Fill_1_80x (1).png" alt="" class="l1">
         <img src="./images/leaf-2_70x.png" alt="" class="l2">
@@ -292,8 +295,8 @@
     </div>
    
     <div class="page5">
-      <h1>Our&nbsp; <span class="line">Lettuce</span> &nbsp;Keeps</h1>
-      <h1>Growing -&nbsp; <span class="line">Literally</span></h1>
+      <h1><span class="first-1">Our</span>&nbsp; <span class="line"><span class="first-2">Lettuce</span></span> &nbsp;<span class="first-2">Keeps</span></h1>
+      <h1><span class="second-1">Growing -&nbsp; </span><span class="line"><span class="second-2">Literally</span></span></h1>
       <p>
         As other market greens begin to decay, Aha! Alive’s harvest-ready produce continues to flourish. Our greens stay fresh 3x longer than those greenhouse and field grown.
       </p>
@@ -316,41 +319,41 @@
     <div class="page6">
       <div class="page6-wrapper">
         <div class="left">
-          <h1>Lettuce Talk</h1>
-          <h1>About the</h1>
-          <h1>Benefits</h1>
+          <h1 class="first">Lettuce Talk</h1>
+          <h1 class="second">About the</h1>
+          <h1 class="third">Benefits</h1>
           <div class="icon-box">
-            <div class="icon">
+            <div class="icon a1 icon-first">
               <img src="./images/plant-icon_small.png" alt=""></img>
               <span class="icon-text">
                 Safe Grown
               </span>
             </div>
-            <div class="icon">
+            <div class="icon a2">
               <img src="./images/sparks-icon_small.png" alt=""></img>
               <span class="icon-text">
                 Pesticide-Free
               </span>
             </div>
-            <div class="icon">
+            <div class="icon a3">
               <img src="./images/map-tag-icon_small.png" alt=""></img>
               <span class="icon-text">
                 Stays Fresh 3x Longer*
               </span>
             </div>
-            <div class="icon">
+            <div class="icon a4 icon-second">
               <img src="./images/dice-icon_small.png" alt=""></img>
               <span class="icon-text">
                 Locally Grown in Michigan
               </span>
             </div>
-            <div class="icon">
+            <div class="icon a5">
               <img src="./images/lightning-icon_small.png" alt=""></img>
               <span class="icon-text">
                 2x the Vitamin C & A*
               </span>
             </div>
-            <div class="icon">
+            <div class="icon a6">
               <img src="./images/butterfly-icon_small.png" alt=""></img>
               <span class="icon-text">
                 Non-GMO
@@ -452,7 +455,9 @@
     </footer>
 
   </div>
- 
+</div>
   </main>
+
+
 </body>
 </html>

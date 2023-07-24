@@ -1,22 +1,6 @@
 @charset "utf-8";
 
-main {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-  z-index: 2;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-.scroll-container {  
-  position: absolute;  
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
- transform-style: preserve-3d;
-}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #FCF3EB;
@@ -780,6 +764,47 @@ main .page5 h1 {
   color: #fcebd9;
   z-index: 9;
 }
+main .page5 .line::before{
+  transition: 0.5s;
+  width: 0;
+}
+main .page5 .line.active::before {
+  width: 100%;
+}
+main .page5 h1 .first-1, 
+main .page5 h1 .first-2, 
+main .page5 h1 .first-3,
+main .page5 h1 .second-1,
+main .page5 h1 .second-2 {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(280%);
+}
+main .page5 h1 .first-1.active{
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page5 h1 .first-2.active{
+  transition: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page5 h1 .first-3.active{
+  transition: 0.7s;
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page5 h1 .second-1.active{
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+main .page5 h1 .second-2.active{
+  transition: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
 main .page5 h1:nth-of-type(2) {
   padding: 0;
 }
@@ -803,6 +828,11 @@ main .page5 .video-box {
   align-items: center;
   margin: auto;
   position: relative;
+  transform: scale(0%);
+  transition: 1s;
+}
+main .page5 .video-box.active {
+  transform: scale(100%);
 }
 main .page5 .video-box video {
   position: absolute;
@@ -882,6 +912,27 @@ main .page6 h1 {
   padding: 0;
   line-height: 1.1;
 }
+main .page6 .first,
+main .page6 .second,
+main .page6 .third {
+  transform: translateY(280%);
+  opacity: 0;
+}
+main .page6 .first.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.5s;
+}
+main .page6 .second.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.6s;
+}
+main .page6 .third.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+}
 main .page6 .icon-box {
   margin-top: 30px;
   width: 500px;
@@ -897,6 +948,11 @@ main .page6 .icon-box .icon {
   text-align: center;
   justify-content: center;
   margin-bottom: 25px;
+  transform: scale(0);
+}
+main .page6 .icon-box .icon.active {
+  transition: 0.6s;
+  transform: scale(100%);
 }
 main .page6 .icon-box .icon img {
   width: 75px;
@@ -1011,6 +1067,13 @@ main .page8 {
 main .page8 h1 {
   padding: 0;
   font-size: 80px;
+  opacity: 0;
+  transform: translateY(280%);
+  transition: 0.5s;
+}
+main .page8 h1.active{
+  opacity: 1;
+  transform: translateY(0);
 }
 main .page8 p {
   font-size: 22px;
@@ -1072,7 +1135,6 @@ main .page8 .button {
 
 main footer {
   background-color: #214B2A;
-
 }
 main footer h1 {
   letter-spacing: -2px;
@@ -1080,6 +1142,11 @@ main footer h1 {
   font-size: 50px;
   color: #9ac818;
   justify-content: flex-start;
+}
+main footer .left {
+  transition: 1s;
+  position: relative;
+  left: 0;
 }
 main footer .footer-wrapper {
   display: flex;
@@ -1174,11 +1241,23 @@ main footer .footer-menu li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
  }
+ main footer .footer-last.active img,
+ main footer .footer-last.active p,
+ main footer .footer-last.active ul{
+  transform: translateY(0);
+  transition: 0.4s;
+ }
+ 
  main footer .footer-last img{
+  transform: translateY(100%);
   width: 87px;
  }
  main footer .footer-last p {
+  transform: translateY(200%);
   margin: 0;
   margin-left: 20px;
   font-size: 14px;
@@ -1187,6 +1266,7 @@ main footer .footer-menu li a {
   font-weight: 500;
  }
  main footer .footer-last ul {
+  transform: translateY(200%);
   color: #214b2a;
   display: flex;
   font-size: 14px;
