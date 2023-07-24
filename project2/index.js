@@ -317,9 +317,9 @@ $(window).on('scroll', () => {
     let currentScroll = window.scrollY;
     // 이전 스크롤 값이 크면 true, 스크롤을 올리면 header 보임
     if (prevScroll > currentScroll) {
-      $('.footer').find('.left').css({ left: -20 });
+      $('footer').find('.left').css({ left: -20 });
     } else {// 이후 스크롤 값이 크면 false, 스크롤을 내리면 header 숨김
-      $$('.footer').find('.left').css({ left: 0 });
+      $('footer').find('.left').css({ left: 0 });
     }
 
     // prev에 현재 스크롤 값 대입
