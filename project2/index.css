@@ -400,6 +400,30 @@ main .page3 .line::before {
   background-color: #fef5ec;
 } 
 
+main .page3 h1 .first,.second,.third {
+  display: flex;
+  justify-content:center;
+    opacity: 0;
+    transform: translateY(280%);
+    transition: 0.4s;
+}
+
+main .page3 h1 .first.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.4s;
+}
+main .page3 h1 .second.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s;
+}
+main .page3 h1 .third.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s;
+}
+
 /* 스와이퍼 */
 
 .swiper {
@@ -879,22 +903,29 @@ main .page7 {
   padding-bottom: 70px;
 }
 main .page7 .page7-wrapper {
-  border-radius: 40px;
-  width: 90%;
-  margin: 40px auto;
-  overflow: hidden;
-  height: 100vh;
   position: relative;
+  border-radius: 40px;
+  max-width: 95%;
+  min-width: 90%;
+  margin: 40px auto;
+  height: 90vh;
+  transition: 1s;
+  overflow: hidden;
 }
 main .page7 .page7-wrapper .text-box {
   position: absolute;
-  top: 5%;
+  top: 0;
   left: 10%;
   background-color: #214B2A;
   padding: 28px 44px;
   width: 507px;
   border-radius: 20px;
+  height: 550px;  
 }
+main .page7 video {
+  width: 100%;
+}
+
 main .page7 h2 {
   width: 80%;
   font-weight: 900;

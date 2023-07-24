@@ -24,15 +24,19 @@ const test = document.querySelector('.page3 h1')
 const test2 = document.querySelector('.page2')
 
 $(window).on('scroll', () => {
-  console.log( 'scrollY'+ ':' + scrollY)
+  // console.log( 'scrollY'+ ':' + scrollY)
   let a = test2.offsetHeight
   let b = test.offsetTop
   let c = b-a;
   // console.log(test2.offsetHeight)
   // console.log(test.offsetTop)
-  console.log(c)
+  // console.log(c)
   if(scrollY> c) {
     $('.page3').find('h1').addClass('active')
+    $('.page3').find('h1').find('.first').addClass('active')
+    $('.page3').find('h1').find('.second').addClass('active')
+    $('.page3').find('h1').find('.third').addClass('active')
+
     setTimeout(() => {
       $('.page3').find('h1').find('.line').addClass('active')
     }, 700);
@@ -97,6 +101,23 @@ $(window).on('scroll', () => {
   }
   });
 
+
+  $(window).on('scroll', () => {
+
+    let position = $(window).scrollTop(); 
+    let a = $('.page7').offset().top
+    let b = $('.page6').outerHeight()
+    let c = a-b;
+    if(scrollY>c){
+      $('.page7').find('.page7-wrapper').width('90%');
+      $('.page7').find('.page7-wrapper').find('.text-box').css({
+        position: 'fixed',
+        top:'10'
+      })
+    }else{
+      $('.page7').find('.page7-wrapper').width('95%');
+  }
+  })
 
 
   // 스와이퍼
@@ -263,3 +284,5 @@ var html = document.documentElement;
         h = Math.ceil(img.naturalHeight * scale);
     gsap.set(img, {width: w, height: h, top: Math.ceil(-450), left: Math.ceil((img.parentNode.offsetWidth - w) / 2), position: "absolute"});
   }
+
+
