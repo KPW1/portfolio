@@ -1,7 +1,5 @@
 const main_img = document.querySelectorAll('.page1 .img-wrapper img')
 
-
-$(document).ready(function() {
   main_img.forEach((a) => {
     a.style.transform = `scale(100%)`;
   });
@@ -17,9 +15,6 @@ $(document).ready(function() {
   setTimeout(() => {
     $('.img-box').find('img').addClass('active')
   }, 2000);
-})
-
-
 
 $(window).on('scroll', () => {
   if(scrollY > 50) {
@@ -36,9 +31,6 @@ if(scrollY > $('.page3').find('h1').offset().top) {
 
 const asd = document.querySelector('.page2');
 const asd2 = document.querySelector('.page1');
-$(window).on('scroll', () => {
-
-});
 let tcard = document.querySelectorAll('.page2 .text-card')
 $(window).on('scroll', () => {
   if(scrollY > 650 && (scrollY < 849)) {
@@ -103,9 +95,6 @@ $(window).on('scroll', () => {
   });
 
 
-
-
-
   // 스크롤 매직
 
   gsap.registerPlugin(ScrollTrigger);
@@ -133,10 +122,7 @@ $(window).on('scroll', () => {
         }
       });
     })
-    
-  
   });
-
   window.addEventListener("resize", () => backgrounds.forEach(img => fitImage(img, movementFactor)));
   
   function fitImage(img, marginFactor) {
@@ -151,6 +137,7 @@ $(window).on('scroll', () => {
   
 const test = document.querySelector('.page3 h1')
 const test2 = document.querySelector('.page2')
+let sh = screen.height
 
   $(window).on('scroll',() => {
     let a = test2.offsetHeight
@@ -170,8 +157,6 @@ const test2 = document.querySelector('.page2')
   }
   })
 
-
-  let sh = screen.height
   $(window).on('scroll', () => {
     const test = document.querySelector('.page4')
     let a = test.offsetTop
@@ -189,6 +174,7 @@ const test2 = document.querySelector('.page2')
       }, 1000);
     }
   })
+
   $(window).on('scroll', () => {
     const test = document.querySelector('.page5')
     let a = test.offsetTop
@@ -208,6 +194,7 @@ const test2 = document.querySelector('.page2')
       }, 1000);
     }
   })
+
   $(window).on('scroll', () => {
     const test = document.querySelector('.page6')
     let a = test.offsetTop
@@ -215,13 +202,11 @@ const test2 = document.querySelector('.page2')
     if(scrollY > c) {
       setTimeout(() => {
         $('.page6').find('.first').addClass('active')
-
       }, 200);
       setTimeout(() => {
         $('.page6').find('.second').addClass('active')
       }, 300);
       setTimeout(() => {
-        
         $('.page6').find('.third').addClass('active')
       }, 400);
     }
@@ -235,18 +220,6 @@ $(window).on('scroll', () => {
     $('.page8').find('h1').addClass('active')
   }
 })
-
-  // $(window).on("wheel", function (e) {
-  //   e.preventDefault();
-  //   var wheelDelta = e.originalEvent.deltaY;
-  //   if (wheelDelta < 0) {
-  //     $("main .page7 .page7-wrapper .text-box").stop().animate({ top: "5%" }, 100);
-  //   } else {
-  //     $("main .page7 .page7-wrapper .text-box")
-  //       .stop()
-  //       .animate({ top: "10%" }, 100);
-  //   }
-  // });
 
   $(window).on('scroll', () => {
     let a = $('.page7').offset().top
@@ -278,8 +251,6 @@ $(window).on('scroll', () => {
     $('.page4').find('.box3').addClass('active')
   })
 
-
-
   $(window).on('scroll', () => {
     const a = $('.page5').find('.video-box').offset().top
     let as = a-sh;
@@ -305,23 +276,16 @@ $(window).on('scroll', () => {
     }
   })
 
-
   let prevScroll = window.scrollY;
   $(window).on('scroll', () => {
     let currentScroll = window.scrollY;
-    // 이전 스크롤 값이 크면 true, 스크롤을 올리면 header 보임
     if (prevScroll > currentScroll) {
       $('footer').find('.left').css({ left: -20 });
-    } else {// 이후 스크롤 값이 크면 false, 스크롤을 내리면 header 숨김
+    } else {
       $('footer').find('.left').css({ left: 0 });
     }
-
-    // prev에 현재 스크롤 값 대입
     prevScroll = currentScroll;
-
   });
-
-
   $(window).on('scroll', () => {
     let a = $('.footer-last').offset().top
     let b = a-sh+150
@@ -332,21 +296,16 @@ $(window).on('scroll', () => {
     }
   })
 
-
-
   const scroll = new Scrooth({
     element: window,
-    strength: 13,
-    accelration:1,
+    strength: 15,
+    accelration:1.5,
     deceleration: 0.975,
   });
 
-
-  $(document).ready(function(){
-    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+  $('#nav-icon4').click(function(){
       $(this).toggleClass('open');
     });
-  });
 
   $('.header-left').find('.menu').on('click', () => {
     $('body').addClass('menu')
