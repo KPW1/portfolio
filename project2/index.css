@@ -1394,7 +1394,7 @@ header .header-left .menu span:last-child{
 }
 body.menu .menu-bg {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #9ac818;
@@ -1431,7 +1431,7 @@ body.menu .close span:last-child{
   transform: translateX(-100%);
   width: 50%;
   transition: 2s;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 999999;
