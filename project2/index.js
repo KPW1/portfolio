@@ -336,8 +336,8 @@ $(window).on('scroll', () => {
 
   const scroll = new Scrooth({
     element: window,
-    strength: 20,
-    acceleration: 1.5,
+    strength: 13,
+    accelration:1,
     deceleration: 0.975,
   });
 

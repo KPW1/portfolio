@@ -86,6 +86,7 @@ header .header-left {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 header .header-left .menu {
@@ -482,11 +483,14 @@ z-index: 22;
 .swiper-pagination .swiper-pagination-bullet:nth-of-type(2){
   z-index: 56;
 }
+.swiper-pagination .swiper-pagination-bullet:hover {
+  color: #9ac918;
+  background: #214b2a;
+}
 .swiper-pagination-bullet-active {
   z-index: 33;
   color: #9ac918;
   background: #214b2a;
-  
 }
 
 .swiper .left {
