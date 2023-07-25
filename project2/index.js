@@ -110,17 +110,15 @@ $(window).on('scroll', () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  let movementFactor = 0.7; // controls how much the backgrounds move. It's a percentage of the section's height. This can be negative if you want to move in the other direction.
+  let movementFactor = 0.7; // 
   let backgrounds = gsap.utils.toArray("div .bg");
   
   backgrounds.forEach((img, i) => {
     
-    img.addEventListener("load", () => { // wait until the image loads because we need to ascertain the naturalWidth/naturalHeight
+    img.addEventListener("load", () => { 
       
       fitImage(img, movementFactor);
       
-      // the first image (i === 0) should be handled differently because it should start at the very top.
-      // use function-based values in order to keep things responsive
       gsap.fromTo(img, {
         y: () => i ? -movementFactor * 0.5 * img.parentNode.offsetHeight : 0
       }, {
@@ -131,18 +129,16 @@ $(window).on('scroll', () => {
           start: () => i ? "top bottom" : "-900px top", 
           end: "bottom top",
           scrub: true,
-          invalidateOnRefresh: true // to make it responsive
+          invalidateOnRefresh: true 
         }
       });
     })
     
   
   });
-  
-  // whenever the window resizes, we should adjust the backgrounds to fit properly.
+
   window.addEventListener("resize", () => backgrounds.forEach(img => fitImage(img, movementFactor)));
   
-  // fits the image into the parent proportionally while ensuring there's enough of a margin for the vertical movement.
   function fitImage(img, marginFactor) {
     let sx = img.parentNode.offsetWidth / img.naturalWidth,
         sy = img.parentNode.offsetHeight * ( Math.abs(marginFactor)) / img.naturalHeight,
@@ -293,12 +289,10 @@ $(window).on('scroll', () => {
   })
 
   $(window).on('scroll', () => {
-    // console.log(scrollY)
     const a = $('.page6').find('.icon-box').find('.icon-first').offset().top
     const b = $('.page6').find('.icon-box').find('.icon-second').offset().top
     let as = a-sh+120;
     let bs = b-sh+120;
-    // console.log(as)
     if(scrollY>as) {
       $('.page6').find('.icon-box').find('.a1').addClass('active')
       $('.page6').find('.icon-box').find('.a2').addClass('active')
@@ -331,11 +325,18 @@ $(window).on('scroll', () => {
   $(window).on('scroll', () => {
     let a = $('.footer-last').offset().top
     let b = a-sh+150
-    console.log(b)
-    console.log(scrollY)
     if(scrollY> b){
       $('.footer-last').addClass('active')
     }else {
       $('.footer-last').removeClass('active')
     }
   })
+
+
+
+  const scroll = new Scrooth({
+    element: window,
+    strength: 18,
+    acceleration: 1.5,
+    deceleration: 0.975,
+  });
