@@ -115,7 +115,7 @@ $(window).on('scroll', () => {
   
   backgrounds.forEach((img, i) => {
     
-    img.addEventListener("load", () => { 
+    window.addEventListener("load", () => { 
       
       fitImage(img, movementFactor);
       
@@ -336,7 +336,27 @@ $(window).on('scroll', () => {
 
   const scroll = new Scrooth({
     element: window,
-    strength: 18,
+    strength: 20,
     acceleration: 1.5,
     deceleration: 0.975,
   });
+
+
+  $(document).ready(function(){
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+      $(this).toggleClass('open');
+    });
+  });
+
+  $('.header-left').find('.menu').on('click', () => {
+    $('body').addClass('menu')
+  })
+
+  $('.close').on('click', () => {
+    $('body').removeClass('menu')
+    $('#nav-icon4').toggleClass('open');
+  })
+  $('.menu-bg').on('click', () => {
+    $('body').removeClass('menu')
+    $('#nav-icon4').toggleClass('open');
+  })
