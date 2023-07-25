@@ -231,7 +231,17 @@ main .first-page .bottom-bar .down span:hover {
   justify-content: flex-end;
   padding-bottom: 5vh;
 }
-
+.menu .inside {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(0,-50%);
+  font-size: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #FFF;
+}
 .menu__item {
   flex: none;
   display: flex;
@@ -373,19 +383,19 @@ main .first-page .bottom-bar .down span:hover {
 }
 
 .menu__item:nth-child(2):hover .hover-reveal {
-  background: url("images/12345.png") no-repeat fixed 100% 50% / cover;
-  transition: opacity 0.5s;
-}
-.menu__item:nth-child(3):hover .hover-reveal {
-  background: url("images/iphone.png") no-repeat fixed 100% 50% / cover;
-  transition: opacity 0.5s;
-}
-.menu__item:nth-child(4):hover .hover-reveal {
   background: url("images/p3.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
-.menu__item:nth-child(5):hover .hover-reveal {
+.menu__item:nth-child(3):hover .hover-reveal {
   background: url("images/p4.png") no-repeat fixed 100% 50% / cover;
+  transition: opacity 0.5s;
+}
+.menu__item:nth-child(4):hover .hover-reveal {
+  background: url("images/12345.png") no-repeat fixed 100% 50% / cover;
+  transition: opacity 0.5s;
+}
+.menu__item:nth-child(5):hover .hover-reveal {
+  background: url("images/iphone.png") no-repeat fixed 100% 50% / cover;
   transition: opacity 0.5s;
 }
 
