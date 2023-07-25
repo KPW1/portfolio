@@ -69,9 +69,6 @@ $(window).on('scroll', () => {
   });
 
 
-
-
-
   // 스와이퍼
   let bullet1 = ['Rainbow Romaine', 'Baby Romaine', 'Butter Lettuce'];
   let swiper = new Swiper(".mySwiper", {
@@ -94,8 +91,6 @@ $(window).on('scroll', () => {
     }
   });
 
-
-  // 스크롤 매직
 
   gsap.registerPlugin(ScrollTrigger);
 
