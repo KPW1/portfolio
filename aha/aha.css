@@ -185,6 +185,7 @@ main .app3 ul {
   font-weight: 500;
 }
 main .app3 ul li {
+  list-style:disc inside;
   margin-bottom: 20px;
 }
 main .app3 .box {
@@ -193,12 +194,13 @@ main .app3 .box {
 }
 main .app3 .box h5{
   color: white;
-  margin-bottom: 12px;
+  margin-top: 40px;
+  margin-bottom: 16px;
 }
 main .app3 .box h6{
   color: white;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .bold{
   font-weight: bold;
