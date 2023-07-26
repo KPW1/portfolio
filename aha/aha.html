@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- open graph -->
+  <meta property="og:title" content="김평우 포트폴리오">
+  <meta property="og:description" content="안녕하세요 김평우의 포트폴리오 입니다">
+  <meta property="og:image" content="../images/00.png">
+  <meta property="og:url" content="https://kpw1.github.io/portfolio/index/index.html">
+  <!-- reset -->
+  <link rel="stylesheet" href="../common/style/reset.css">
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- svg -->
+  <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css" />
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../images/favicon (7).ico" type="image/x-icon">
+  <!-- style -->
+  <link rel="stylesheet" href="aha.css">
+  <!-- jQuery -->
+  <script src="../common/style/jquery-3.7.0.min.js"></script>
+  <!-- js -->
+  <script defer src="./hwa.js"></script>
+  <title>Aha! Alive</title>
+</head>
+<body>
+  <header>
+    <a class="name" href="../index.html">pyeong woo</a>
+    <span class="header_menu">
+        <ul>
+            <li><a href="../index.html" class="btn1">Home</a></li>
+            <li><a href="../yg/yg.html" class="btn2">YG Family</a></li>
+            <li><a href="./aha.html" class="btn3">Aha! Alive</a></li>
+            <li><a href="../hwayoung/hwa.html" class="btn4">Hwayoung</a></li>
+            <li><a href="../happyrun/hrun.html" class="btn5">Happyrun</a></li>
+        </ul>
+    </span>
+</header>
+<main>
+  <div data-aos="fade-up" data-aos-duration="1000" class="first-page home" id="home">
+    <div class="header-txt-box">
+        <h1>AHA!&nbsp;ALIVE</h1>
+    </div>
+    <div class="img-wrapper">
+      <ul>
+          <li><img src="images/aha.png" alt="" class="img1"></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="app app1">
+    <div class="text-box-left">
+      <h3>AHA! ALIVE</h3>
+    </div>  
+    <div class="text-box-right">
+      <h4>목표</h4>
+      <p>다양한 애니메이션과 효과가 있는 사이트를 <span class="block"></span>
+        여러가지 스크립트와 플러그인들을 이용하여 구현함 </p>
+    </div>
+  </div>
+  <div class="app app2">
+    <div class="text-box-left">
+      <h3>Plugin</h3>
+    </div>  
+    <div class="text-box-right">
+      <ul>
+        <li>      
+          <h4>GSAP(ScrollTrigger) </h4>
+          <p>Scroll 플러그인</p>
+        </li>
+        <li>
+          <h4>Scrooth</h4>
+          <p>마우스휠 플러그인</p>
+        </li>
+        <li>
+          <h4>Swiper</h4>
+          <p>슬라이드 플러그인</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="app app3">
+    <div class="text-box-left">
+      <h3>Project</h3>
+    </div>  
+    <div class="text-box-right">
+      <h4>Publishing</h4>
+      <ul>
+        <li>기존 사이트의 여러 효과들을 CSS/JS를 이용하여 표현</li>
+        <li>swiper의 레이아웃을 수정하여 배치</li>
+        <li>scrooth를 이용하여 마우스휠 움직임 부드럽게 하기</li>
+        <li>GSAP의 ScrollTrigger를 이용하여 사진이 움직이는 효과</li>
+        <li>특정 구간에 스크롤될때마다 애니메이션 효과</li>
+      </ul>
+      <h4 class="problem">Problem & Solution</h4>
+      <div class="box">
+        <h5>Swiper 레이아웃</h5>
+        <h6>Problem</h6>
+      <p>
+        기존의 Swiper 레이아웃의 HTML을 사용하여 Swiper 바깥쪽에 버튼을 배치하려고 했습니다. <span class="block"></span>
+        그러나, Swiper의 기본 속성인 <span class="bold">overflow:hidden</span> 값으로 인해 버튼이 레이아웃 바깥으로 배치할수 없었습니다.
+      </p>
+      <h6>Solution</h6>
+      <p>
+        Swiper 레이아웃 바깥쪽에 <span class="bold">Swiper 전체를 감싸는 div 영역을 추가</span>하고 <span class="block"></span>
+        기존 Swiper의 Position은 Static으로 수정했습니다. <span class="block"></span>
+        그리고, 새로 추가한 div영역을 <span class="bold">Position: Relative</span>로 지정하여 <span class="block"></span>
+        Swiper 바깥쪽에 버튼을 Swiper 외부에 배치하였습니다.
+      </p>
+      </div>
+      <div class="box">
+        <h5>마우스휠 관련 플러그인 </h5>
+        <h6>Problem</h6>
+      <p>
+        GSAP의 SmoothScroll 이라는 기능을 이용하여 <span class="bold">마우스휠의 움직임을 부드럽게 표현</span>하려고 했습니다. <span class="block"></span>
+        그러나, 이 플러그인은 HTML Body영역 전체를 translate를 이용하고 움직임을 표현하고 overflow:hidden이 <span class="block"></span>
+        적용되어 <span class="bold">position: sticky를 지정한 영역의 sticky 기능이 작동하지 않는 문제</span>가 있었습니다.
+      </p>
+      <h6>Solution</h6>
+      <p>
+        SmoothScroll과 비슷한효과를 줄수있는 여러가지 플러그인들을 적용하기 위해서 <span class="block"></span>
+        <span class="bold">easeScroll, jQuery UI의 animation 효과</span>등을 적용해봤습니다. <span class="block"></span>
+        그중에 원하는 느낌과 가장 비슷한효과를 표현해주는 <span class="bold">Scrooth</span> 라는 플러그인을 사용하여 <span class="block"></span>
+        마우스휠의 움직임을 부드럽게 표현하였고, <span class="bold">position:sticky 가 지정된 영역도 정상적으로 작동</span>했습니다.
+      </p>
+      </div>
+      <div class="box">
+        <h5>스크립트 작동 좌표</h5>
+        <h6>Problem</h6>
+      <p>
+        특정 영역에 스크롤이 되면 스크립트가 작동되도록 표현하려고 if문을 사용하려 했는데, <span class="block"></span>
+        <span class="bold">scrollY의 값</span>을 어떤식으로 잡아야 할지 고민했습니다. 
+      </p>
+      <h6>Solution</h6>
+      <p>
+        처음에는 해당 영역의 scrollY값을 직접 구해본뒤, if문의 조건에 그 숫자를 직접 입력했는데 <span class="block"></span>
+        <span class="bold">영역이 변경될수있고 작업효율도 좋지않다고 생각</span>하여 영역의 크기나 좌표에대해 검색을 하여 알아 보았습니다.<span class="block"></span>
+        그렇게 검색해서 알아본뒤 offsetTop은 해당영역에서 페이지의 맨위까지의 크기를 나타내주기 때문에<span class="block"></span>
+        <span class="bold">작동되기 원하는 영역의 offsetTop에서 화면의 높이(screen.height)만큼을 빼준 결과</span>를 <span class="block"></span>
+        <span class="bold">scrollY의 범위로 지정</span>하는식으로 스크립트를 원하는 영역에서 작동시켰습니다.
+      </p>
+      </div>
+      
+    </div>
+  </div>
+</main>
+<footer>
+  <a href="../project2/index.html" target="_blank">Aha! Alive 바로가기</a>
+</footer>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
