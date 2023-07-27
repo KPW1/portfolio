@@ -116,7 +116,8 @@ main .centers .center-img {
 main .centers .txt-box {
   width: 550px;
   left: 50%;
-  transform: translate(0, -30%);
+  top: 50%;
+  transform: translate(0, -50%);
   margin-right: 40px;
 }
 
