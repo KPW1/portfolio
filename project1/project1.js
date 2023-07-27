@@ -1,11 +1,9 @@
 let prevScroll = window.scrollY;
-console.log(prevScroll);
 
 $(window).on('scroll', () => {
   // 스크롤시 변수에 저장
   let currentScroll = window.scrollY;
-  console.log('currentScroll: ', currentScroll);
-  console.log('1 prevScroll: ', prevScroll);
+
 
   // 이전 스크롤 값이 크면 true, 스크롤을 올리면 header 보임
   if (prevScroll > currentScroll) {
@@ -18,7 +16,6 @@ $(window).on('scroll', () => {
 
   // prev에 현재 스크롤 값 대입
   prevScroll = currentScroll;
-  console.log('2 prevScroll: ', prevScroll);
 });
 
 $(window).on('click',(e) => {
@@ -161,4 +158,10 @@ $('.centers').find('.prev').on('click', () => {
 })
 
 
+$('header').find('.menuicon').on('click', () =>{
+  $('.menu-bar').addClass('active');
+})
 
+$('.menu-bar').find('.close').on('click',() =>{
+  $('.menu-bar').removeClass('active');
+})

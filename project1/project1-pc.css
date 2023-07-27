@@ -23,9 +23,7 @@ header ul li a {
   padding: 15px 30px;
   border-radius: 20px;
 }
-header ul {
-  margin-right: 60px;
-}
+
 
 /***** contents *****/
 
@@ -228,3 +226,5 @@ footer .footer-info {
   width: 90%;
   margin: 0 auto;
 }
+
+
