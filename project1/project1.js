@@ -165,3 +165,39 @@ $('header').find('.menuicon').on('click', () =>{
 $('.menu-bar').find('.close').on('click',() =>{
   $('.menu-bar').removeClass('active');
 })
+
+
+
+
+
+
+$.ajax({
+  url:"./project1.json",
+  dataType: "json",
+  success: function(data) {
+    data.forEach((a,idx,arr) => {
+      console.log('a', a);
+      const title = a.title;
+      const des = a.description;
+      const url = a.url;
+      const subtitle = a.subtitle;
+      const main = 
+      `
+      <div class="item item${idx+1}">
+        <div class=item-img>
+          <div class=img-box> 
+            <img src="${url}">
+          </div>
+          <h2>${title}</h2>
+        </div>
+        <h3>${subtitle}</h3>
+        <p>${des}</p>
+      </div>
+      `
+      $('.items').append(main);
+      $('.item3, .item4').addClass('pc-menu');
+    });
+   }
+  
+});
+
