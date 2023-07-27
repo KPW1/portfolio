@@ -83,9 +83,13 @@ main .highlights .items .item {
   align-items: flex-end;
   cursor: pointer;
 }
+main .highlights .items .item .item-img .img-box {
+  width: 450px;
+  height: 360px;
+  overflow: hidden;
+}
 main .highlights .items .item .item-img img:hover {
-  width: 400px;
-  height: 340px;
+  transform: scale(110%);
   transition: 1s;
 }
 main .highlights .move-line {
@@ -99,6 +103,7 @@ main .highlights .move-line .move-line2 {
 /* centers */
 main .centers {
   width: 100%;
+  padding-bottom: 60px;
 }
 main .centers h1 {
   width: 80%;
@@ -111,7 +116,7 @@ main .centers .center-img {
 main .centers .txt-box {
   width: 550px;
   left: 50%;
-  transform: translate(0, -45%);
+  transform: translate(0, -30%);
   margin-right: 40px;
 }
 
@@ -136,7 +141,6 @@ main .careers {
   height: 900px;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
   max-width: 1440px;
   display: flex;
   flex-direction: column;
@@ -145,11 +149,15 @@ main .careers {
 main .careers h1 {
   margin-bottom: 0px;
 }
+main .careers .career-box ul li .txt {
+  height: 250px;
+}
 main .careers .career-img {
   z-index: 1;
   position: relative;
   width: 50%;
-  left: 500px;
+  left: 800px;
+  top: -100px;
   transform: none;
   object-fit: cover;
 }
