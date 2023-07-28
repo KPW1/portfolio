@@ -179,15 +179,10 @@ top: 50%;
 }
 
 /* sponser */
-main .sponser ul {
-  margin: 100px 0 120px 100px;
-  width: 250%;
-  display: flex;
-  animation: tablet_ani linear infinite 30s;
-}
-main .sponser ul li a img {
+
+main .sponser .sponser-mark img {
   width: 150px;
-  margin: 0 30px;
+  margin: 0 60px;
 }
 
 /* careers */

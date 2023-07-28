@@ -248,3 +248,4 @@ $('a.none').on('click', (e) => {
   // console.log(scrollY);
 // }
 // addEventListener("scroll",log);
+

@@ -150,9 +150,9 @@ display: none;
   height: 100%;
 }
 .navigation-container .text-wrapper .text-inner {
-  position: absolute;
+  /* position: absolute; */
   white-space: nowrap;
-  animation: text-ani 60s linear infinite reverse;
+
 }
 .navigation-container .scroll-wrapper {
   overflow: hidden;
@@ -176,11 +176,11 @@ display: none;
   padding: 10px;
   cursor: pointer;
 }
-@keyframes text-ani {
+/* @keyframes text-ani {
   from { transform: translateX(0%); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-100%); }
   
-}
+} */
 
 
 /* footer */

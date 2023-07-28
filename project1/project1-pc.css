@@ -123,19 +123,13 @@ main .centers .txt-box {
 }
 
 /* sponser */
-main .sponser ul {
-  margin: 100px 0 120px 100px;
-  width: 250%;
-  display: flex;
-  animation: pc_ani linear infinite 30s;
-}
-main .sponser ul li a {
-  margin-right: 100px;
-}
-main .sponser ul li a img {
+
+
+main .sponser .sponser-mark img {
   width: 200px;
-  margin: 0 30px;
+  margin: 0 100px;
 }
+
 /* careers */
 
 main .careers {

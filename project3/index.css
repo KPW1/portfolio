@@ -386,13 +386,12 @@ main .fourth-page-container h2 {
   top: -100px;
   border-bottom: 3px solid black;
   overflow: hidden;
+  display: flex;
+  padding-top: 180px;
 }
 .slide-text-wrapper h2 {
   white-space: nowrap;
   font-weight: bold;
-  position: absolute;
-  bottom: 25%;
-  animation: text-ani 40s linear infinite;
 }
 .sb {
   transform: translate(1050%,750%);

@@ -1,32 +1,8 @@
 @charset "utf-8";
 
-@keyframes pc_ani {
-  0% {
-    transform: translateX(0%);
-  }
-  25% {
-    transform: translateX(-25%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  75% {
-    transform: translateX(-75%);
-  }
+/* @keyframes pc_ani {
   100% {
     transform: translateX(-100%);
-  }
-  125% {
-    transform: translateX(-75%);
-  }
-  150% {
-    transform: translateX(-50%);
-  }
-  175% {
-    transform: translateX(-25%);
-  }
-  200% {
-    transform: translateX(-0%);
   }
 }
 
@@ -55,4 +31,4 @@
   100% {
     transform: translateX(-400%);
   }
-}
+} */
