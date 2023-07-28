@@ -445,7 +445,7 @@ footer .footer-info {
   align-items: flex-end;
   justify-content: space-between;
 }
-footer .footer-info .portfolio {
+footer .footer-info .portfolio a{
   font-family: "Noto Sans KR", sans-serif;
   font-size: 8px;
   font-weight: 400;
@@ -458,8 +458,9 @@ footer .footer-info .portfolio {
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
+  display: block;
 }
-footer .footer-info .portfolio:hover {
+footer .footer-info .portfolio a:hover {
   background-color: black;
   color: white;
 }
