@@ -221,4 +221,4 @@ function Marquee(selector, speed) {
   }, 0);
 }
 
-window.addEventListener('load', Marquee('.sponser', 1))
+window.addEventListener('load', Marquee('.sponser', 0.6))

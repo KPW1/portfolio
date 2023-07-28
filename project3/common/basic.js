@@ -88,4 +88,4 @@ function Marquee(selector, speed) {
 }
 
 window.addEventListener('load', Marquee('nav .text-wrapper', 0.15))
-window.addEventListener('load', Marquee('.slide-text-wrapper', 0.7))
+window.addEventListener('load', Marquee('.slide-text-wrapper', 0.6))
