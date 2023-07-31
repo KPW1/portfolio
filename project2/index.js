@@ -1,3 +1,8 @@
+$(window).on('load',function() {
+  $('#load').hide();
+});
+
+
 const main_img = document.querySelectorAll('.page1 .img-wrapper img')
 
   main_img.forEach((a) => {
@@ -297,7 +302,6 @@ $(window).on('scroll', () => {
     accelration:1.5,
     deceleration: 0.975,
   });
-
 
 
   
