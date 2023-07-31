@@ -142,11 +142,11 @@ main .first-page .header-txt-box {
   pointer-events: none;
 }
 main .first-page .header-txt-box h1 {
-
   z-index: 999;
   text-transform: uppercase;
   font-size: 9.42vw;
   line-height: 9.13vw;
+  text-shadow: 2px 2px 4px white;
 }
 main .first-page .header-txt-box h1:last-child {
   margin-left: 11vw;
