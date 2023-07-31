@@ -293,11 +293,14 @@ $(window).on('scroll', () => {
 
   const scroll = new Scrooth({
     element: window,
-    strength: 15,
+    strength: 20,
     accelration:1.5,
     deceleration: 0.975,
   });
 
+
+
+  
   $('#nav-icon4').click(function(){
       $(this).toggleClass('open');
     });

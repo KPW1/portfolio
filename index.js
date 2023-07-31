@@ -1,3 +1,8 @@
+
+
+
+
+
 // footer date
 function now() {
   let now = new Date();
@@ -51,21 +56,10 @@ $(function () {
 
 
 const body = document.querySelector("body");
-// $(window).on("scroll", () => {
-//   const footer = $(".profile").offset().top - 500;
-//   console.log(footer);
-//   console.log(scrollY);
-//   if (scrollY > 100) {
-//     $("body").addClass("active");
-//   } else {
-//     $("body").removeClass("active");
-//   }
-// });
+
 const profile = document.querySelector(".profile");
 addEventListener("scroll", () => {
   const center = profile.offsetTop;
-  // console.log(scrollY);
-  // console.log(center);
   if (scrollY > center-200) {
     document.body.classList.add("active");
   } else {
@@ -80,31 +74,9 @@ $('.name').on('click', () => {
   })
 })
 
-// $('.happyrun_btn').on('click', () => {
-//   $('.happyrun').addClass('active');
-// }) 
-
-// $('.happyrun_close').on('click', () =>{
-//   $('.happyrun').removeClass('active');
-// })
-
-// $('.more_btn').on('click', () => {
-//   $('.more_btn').attr({ href: './teamproject.pdf', 'target': '_blank' });
-// })
-// locomotive
-// (function () {
-//   const scroll = new LocomotiveScroll({
-//     el: document.querySelector("[data-scroll-container]"),
-//   });
-// })();
-
-
-
 
   let prevScroll = window.scrollY;
 
-
-  
  $(window).on('scroll', () => {
     let currentScroll = window.scrollY;
     if (prevScroll > currentScroll) {
@@ -12415,4 +12387,5 @@ canvas.addEventListener( 'mouseup', function( e ) {
 
 // once the window loads, we are ready for some fireworks!
 window.onload = loop;
+
 
