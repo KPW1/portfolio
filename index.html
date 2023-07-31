@@ -38,9 +38,10 @@
 </head>
 
 <body>
+    <!-- 헤더 -->
     <header>
         <span class="name">pyeong woo</span>
-        <span class="header_menu">
+        <span class="header-menu">
             <ul>
                 <li><a href="#home" class="btn1">Home</a></li>
                 <li><a href="#project" class="btn2">Project</a></li>
@@ -49,16 +50,20 @@
             </ul>
         </span>
     </header>
+    <!-- 페이지 시작 -->
     <main>
+        <!-- 첫 화면 -->
         <div class="first-page home" id="home">
             <canvas id="canvas"></canvas>
+            <!-- 첫 화면 텍스트 영역 -->
             <div class="header-txt-box">
                 <h1 data-aos="fade-up" data-aos-duration="1000">publisher &</h1>
                 <h1 data-aos="fade-up" data-aos-duration="1500">designer</h1>
             </div>
+            <!-- 첫 화면 아래 영역 -->
             <div class="bottom-bar">
                 <div class="github">
-                    <a href="https://github.com/KPW1/portfolio" target="_blank"><span><span class="github_txt">watching
+                    <a href="https://github.com/KPW1/portfolio" target="_blank"><span><span class="github-txt">watching
                                 github</span>
                             <span class="material-symbols-outlined">
                                 north_east
@@ -79,10 +84,11 @@
                     </a>
                 </div>
             </div>
-        
         </div>
+        <!-- 프로젝트 -->
         <nav class="menu" id="project">
             <h2>project</h2>
+            <!-- YG -->
             <a class="menu__item" href="./yg/yg.html" target="_blank"
                 data-aos="fade-up" data-aos-anchor-placement="center-bottom" style="z-index: 1;">
                 <span class="menu__item-text">
@@ -95,7 +101,7 @@
                     </div>
                 </div>
             </a>
-
+            <!-- 아하 -->
             <a class="menu__item  happyrun_btn" data-aos="fade-up" data-aos-anchor-placement="center-bottom" style="z-index: 1;" href="./aha/aha.html">
                 <span class="menu__item-text"><span class="menu__item-textinner">Aha! alive <span class="inside">#개인프로젝트 #퍼블리싱 #JavaScript</span>
                         <span class="menu_right">&gt;</span></span></span>
@@ -105,7 +111,7 @@
                     </div>
                 </div>
             </a>
-
+            <!-- 화영 -->
             <a class="menu__item" href="./hwayoung/hwa.html" data-aos="fade-up" data-aos-anchor-placement="center-bottom" style="z-index: 1;">
                 <span class="menu__item-text"><span class="menu__item-textinner">Hwayoung <span class="inside">#개인프로젝트 #반응형웹 #리디자인 #퍼블리싱</span> <span
                             class="menu_right">&gt;</span></span></span>
@@ -115,6 +121,7 @@
                     </div>
                 </div>
             </a>
+            <!-- 해피런 -->
             <a class="menu__item" href="./happyrun/hrun.html" data-aos="fade-up" data-aos-anchor-placement="center-bottom" style="z-index: 1;">
                 <span class="menu__item-text"><span class="menu__item-textinner">Happyrun  <span class="inside">#팀프로젝트 #리디자인 #UI/UX</span><span
                             class="menu_right">&gt;</span></span></span>
@@ -124,34 +131,23 @@
                     </div>
                 </div>
             </a>
-            <!-- <div class="happyrun">
-                <span class="material-symbols-outlined happyrun_close">
-                    close
-                </span>
-                <span class="before">BEFORE</span>
-                <span class="after">AFTER</span>
-                <img src="./images/happyrun2.png" alt="happyrun" class="run1">
-                <img src="./images/happyrun.png" alt="happyrun2" class="run2">
-                   <a class="more_btn" href="#">MORE</a>
-            </div> -->
         </nav>
-
-        <svg class="cursor" width="40" height="40" viewBox="0 0 0 0"
-            style="opacity: 1; transform: translateX(-400px) translateY(-8000px);">
-            <circle class="cursor__inner" cx="20" cy="20" r="10"></circle>
         </svg>
-
+        <!-- 스킬 -->
         <div class="skills " id="skills" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-            <div class="skills_box">
-                <div class="skills_left">
+            <div class="skills-box">
+                <!-- 스킬 왼쪽 공간 -->
+                <div class="skills-left">
                     <h2>skills</h2>
-                    <div class="skills_img">
+                    <!-- 스킬 이미지 영역 -->
+                    <div class="skills-img">
                         <img src="./images/ht.png" alt="img1" class="active">
                         <img src="./images/js.png" alt="img2">
                         <img src="./images/ps.png" alt="img3">
                     </div>
                 </div>
-                <div class="skills_right" data-aos="fade-left">
+                <!-- 스킬 오른쪽 공간 -->
+                <div class="skills-right" data-aos="fade-left">
                     <span class=" html">
                         <h3>HTML5 & CSS3</h3>
                         <p>웹 접근성을 고려한 시맨틱 마크업 <span class="block"></span>
@@ -188,20 +184,20 @@
                 </div>
             </div>
         </div>
+        <!-- 프로필  -->
         <div class="profile" id="profile" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <h2>profile</h2>
-            <div class="git_box">
+            <!-- 깃 영역 -->
+            <div class="git-box">
                 <h3><img src="./images/git2.svg" alt="git">Github</h3>
-                <a href="https://github.com/KPW1" target="_blank" class="git_main"><span>Main</span></a>
-                <a href="https://github.com/KPW1/homework-kpw" target="_blank" class="git_pf"><span>Homework</span></a>
+                <a href="https://github.com/KPW1" target="_blank" class="git-main"><span>Main</span></a>
+                <a href="https://github.com/KPW1/homework-kpw" target="_blank" class="git-pf"><span>Homework</span></a>
             </div>
-            <div class="profile_box">
-                
-                <div class="profile_left">
-                    <span class="profile_circle"></span>
-                    
+            <div class="profile-box">
+                <div class="profile-left">
+                    <span class="profile-circle"></span>
                 </div>
-                <div class="profile_right">
+                <div class="profile-right">
                     <span class="name">
                         <h3>이름</h3>
                         <p>김평우</p>
@@ -218,22 +214,24 @@
                         <h3>웹디자인 및 UI UX 웹퍼블리셔 과정 수료</h3>
                         <p>2023.03.08 ~ 2023.08.03</p>
                     </span>
-                   
                 </div>
             </div>
         </div>
     </main>
+    <!-- 푸터 -->
     <footer>
-        <div class="footer_box">
-            <div class="footer_left">
+        <div class="footer-box">
+            <!-- 푸터 왼쪽 영역 -->
+            <div class="footer-left">
                 <span class="copyrights">2023ⓒ</span>
                 <span class="date" id="date">date</span>
             </div>
-            <div class="footer_right">
-                <a href="mailto:sukp248@gmail.com" class="footer_email"><span>E-mail</span></a>
-                <a href="#" class="footer_kakao"><span>Kakaotalk</span></a>
-                <div class="kakao_page">
-                    <span class="material-symbols-outlined kakao_close">
+            <!-- 푸터 오른쪽 영역 -->
+            <div class="footer-right">
+                <a href="mailto:sukp248@gmail.com" class="footer-email"><span>E-mail</span></a>
+                <a href="#" class="footer-kakao"><span>Kakaotalk</span></a>
+                <div class="kakao-page">
+                    <span class="material-symbols-outlined kakao-close">
                         close
                     </span>
                     <img src="./images/kakaotalk.png" alt="kakao">

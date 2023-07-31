@@ -24,13 +24,13 @@ body.active header {
   background-color: white;
   color: black;
 }
-body.active header .header_menu ul li a:hover::after {
+body.active header .header-menu ul li a:hover::after {
   background-color: black;
 }
-body.active .profile .git_main {
+body.active .profile .git-main {
   border: 1px solid black;
 }
-body.active .profile .git_pf {
+body.active .profile .git-pf {
   border: 1px solid black;
 }
 .block {
@@ -85,27 +85,27 @@ header .name {
   font-size: 1.125rem;
   cursor: pointer;
 }
-header .header_menu {
+header .header-menu {
   font-size: 1rem;
 }
-header .header_menu ul {
+header .header-menu ul {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .header_menu ul li {
+header .header-menu ul li {
   display: flex;
 }
-header .header_menu ul li a {
+header .header-menu ul li a {
   position: relative;
   margin: 0 1.25rem;
 }
-header .header_menu ul li a:after {
+header .header-menu ul li a:after {
   content: "";
   display: block;
   width: 0%;
 }
-header .header_menu ul li a:hover::after {
+header .header-menu ul li a:hover::after {
   content: "";
   display: block;
   width: 100%;
@@ -168,12 +168,12 @@ main .first-page .bottom-bar .github {
   left: 2%;
   transform: translate(40px, -20px);
 }
-main .first-page .bottom-bar .github .github_txt::after {
+main .first-page .bottom-bar .github .github-txt::after {
   content: "";
   display: block;
   width: 0%;
 }
-main .first-page .bottom-bar .github .github_txt:hover::after {
+main .first-page .bottom-bar .github .github-txt:hover::after {
   content: "";
   display: block;
   border: 1px solid white;
@@ -410,7 +410,7 @@ main .skills {
 main .skills h2 {
   margin: 0px;
 }
-main .skills .skills_box {
+main .skills .skills-box {
   overflow: hidden;
   margin-top: 70px;
   margin: 70px auto 0 auto;
@@ -423,10 +423,10 @@ main .skills .skills_box {
   transform: translate(-50%, -50%);
   /* flex-direction: row-reverse; */
 }
-main .skills .skills_box .skills_left {
+main .skills .skills-box .skills-left {
   margin-left: 10%;
 }
-main .skills .skills_box .skills_left h2::after {
+main .skills .skills-box .skills-left h2::after {
   content: "";
   display: block;
   width: 120px;
@@ -435,13 +435,13 @@ main .skills .skills_box .skills_left h2::after {
   background-color: white;
 }
 
-main .skills .skills_box .skills_left .skills_img {
+main .skills .skills-box .skills-left .skills-img {
   width: 150px;
   height: 150px;
   position: relative;
   display: flex;
 }
-main .skills .skills_box .skills_left .skills_img img {
+main .skills .skills-box .skills-left .skills-img img {
   position: absolute;
   z-index: 9999;
   top: 50%;
@@ -452,10 +452,10 @@ main .skills .skills_box .skills_left .skills_img img {
   opacity: 0;
   transition: 1s;
 }
-main .skills .skills_box .skills_left .skills_img img.active {
+main .skills .skills-box .skills-left .skills-img img.active {
   opacity: 1;
 }
-main .skills .skills_box .skills_right {
+main .skills .skills-box .skills-right {
   display: grid;
   width: 70%;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -465,12 +465,12 @@ main .skills .skills_box .skills_right {
   grid-template: 1fr 1fr / 1fr 1fr;
   gap: 4vw;
 }
-main .skills .skills_box .skills_right h3 {
+main .skills .skills-box .skills-right h3 {
   font-size: 1.25vw;
   font-weight: 700;
   margin-bottom: 10px;
 }
-main .skills .skills_box .skills_right p {
+main .skills .skills-box .skills-right p {
   font-size: 0.938vw;
   margin-bottom: 30px;
   font-weight: 400;
@@ -485,7 +485,7 @@ main .profile {
   color: white;
   position: relative;
 }
-main .profile .profile_box {
+main .profile .profile-box {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -498,10 +498,10 @@ main .profile .profile_box {
   width: 80%;
   display: flex;
 }
-main .profile .profile_box .profile_left {
+main .profile .profile-box .profile-left {
   margin-right: 10%;
 }
-main .profile .profile_box .profile_left .profile_circle {
+main .profile .profile-box .profile-left .profile-circle {
   display: block;
   width: 250px;
   height: 250px;
@@ -510,21 +510,21 @@ main .profile .profile_box .profile_left .profile_circle {
   animation: gradient 10s ease infinite;
   border-radius: 50%;
 }
-main .profile .profile_box .profile_left .profile_circle:hover {
+main .profile .profile-box .profile-left .profile-circle:hover {
   background-size: 300% 300%;
   animation-duration: 5s;
 }
-main .profile .profile_box .profile_right h3 {
+main .profile .profile-box .profile-right h3 {
   font-size: 0.833vw;
   font-weight: 400;
   margin-bottom: 10px;
 }
-main .profile .profile_box .profile_right p {
+main .profile .profile-box .profile-right p {
   font-size: 1.042vw;
   margin-bottom: 30px;
   font-weight: 700;
 }
-.git_main{ 
+.git-main{ 
   font-size: 20px;
   border: 1px solid white;
   border-radius: 30px;
@@ -534,7 +534,7 @@ main .profile .profile_box .profile_right p {
   margin-bottom: 30px;
   font-weight: 700;
 }
-.git_pf{
+.git-pf{
   font-size: 20px;
   border: 1px solid white;
   border-radius: 30px;
@@ -544,21 +544,21 @@ main .profile .profile_box .profile_right p {
   font-weight: 700;
 
 }
-.git_main:hover {
+.git-main:hover {
 color: white;
 background-color: black;
   cursor: url(./images/git1.svg) 20 20, auto;
 }
-.git_pf:hover {
+.git-pf:hover {
   color: white;
   background-color: black;
   cursor: url(./images/git1.svg) 20 20, auto;
 }
-.git_box img {
+.git-box img {
   width: 40px;
   margin-right: 5px;
 }
-.git_box {
+.git-box {
   z-index: 999;
   top:35%;
   left: 10%;
@@ -570,7 +570,7 @@ background-color: black;
   /* align-items: flex-start; */
   /* border: 1px solid black; */
 }
-.git_box h3{
+.git-box h3{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,38 +583,38 @@ footer {
   color: #fff;
   font-size: 0.938vw;
 }
-footer .footer_box {
+footer .footer-box {
   position: relative;
   padding: 1.563vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-footer .footer_box .footer_left {
+footer .footer-box .footer-left {
   font-weight: 400;
 }
-footer .footer_box .footer_right {
+footer .footer-box .footer-right {
   font-weight: 500;
 }
-footer .footer_box .footer_left span {
+footer .footer-box .footer-left span {
   margin-right: 1.042vw;
 }
-footer .footer_box .footer_right span {
+footer .footer-box .footer-right span {
   margin-left: 1.042vw;
 }
-footer .footer_box .footer_right .footer_email:hover {
+footer .footer-box .footer-right .footer-email:hover {
   color: #295c00;
   cursor: url(./images/mail.svg) 20 20, auto;
 }
-footer .footer_box .footer_right .footer_kakao {
+footer .footer-box .footer-right .footer-kakao {
   position: relative;
 }
-footer .footer_box .footer_right .footer_kakao:hover {
+footer .footer-box .footer-right .footer-kakao:hover {
   color: #f7e600;
   cursor: url(./images/kakao.svg) 20 20, auto;
 }
 
-footer .footer_box .footer_right .kakao_page {
+footer .footer-box .footer-right .kakao-page {
   display: block;
   background-color: white;
   position: absolute;
@@ -627,29 +627,29 @@ footer .footer_box .footer_right .kakao_page {
   opacity: 0;
   pointer-events: none;
 }
-footer .footer_box .footer_right .kakao_page.active {
+footer .footer-box .footer-right .kakao-page.active {
   opacity: 1;
   pointer-events: visible;
 
 }
-footer .footer_box .footer_right .kakao_page:hover {
+footer .footer-box .footer-right .kakao-page:hover {
   color: black;
 }
-footer .footer_box .footer_right .kakao_page img {
+footer .footer-box .footer-right .kakao-page img {
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -45%);
   width: 300px;
 }
-footer .footer_box .footer_right .kakao_page .kakao_close {
+footer .footer-box .footer-right .kakao-page .kakao-close {
   cursor: pointer;
   position: absolute;
   font-size: 40px;
   right: 5%;
   top: 3%;
 }
-footer .footer_box .footer_right .kakao_page .kakao_close:hover {
+footer .footer-box .footer-right .kakao-page .kakao-close:hover {
   color:#f7e600;
 }
 
@@ -675,7 +675,7 @@ footer .footer_box .footer_right .kakao_page .kakao_close:hover {
   display: block;
   pointer-events: visible;
 }
-.happyrun .happyrun_close {
+.happyrun .happyrun-close {
   position: absolute;
   right: 0;
   font-size: 60px;
@@ -720,7 +720,7 @@ footer .footer_box .footer_right .kakao_page .kakao_close:hover {
   width: 250px;
 }
 
-.happyrun .more_btn {
+.happyrun .more-btn {
   font-size: 30px;
   width: 200px;
   height: 100px;
@@ -735,7 +735,7 @@ footer .footer_box .footer_right .kakao_page .kakao_close:hover {
   align-items: center;
   cursor: pointer;
 }
-.happyrun .more_btn:hover{
+.happyrun .more-btn:hover{
   color: black;
   background-color: rgb(54, 54, 54);
 }
