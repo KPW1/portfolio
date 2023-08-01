@@ -1,3 +1,16 @@
+
+function preload() {
+  for(let i = 0; i < preload.arguments.lenght; i++) {
+    images[i] = new Image();
+    images[i].src = preload.arguments.src;
+  }
+}
+
+preload(
+  "../common/loading.gif"
+
+)
+
 $(window).on('load',function() {
   $('#load').hide();
 });
