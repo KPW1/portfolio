@@ -26,6 +26,13 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #FCF3EB;
 }
+body .wrapper  {
+opacity: 0;
+}
+body.loaded .wrapper {
+  opacity: 1;
+  transition: .4s;
+}
 .block {
   display: block;
 }

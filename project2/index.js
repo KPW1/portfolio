@@ -1,6 +1,7 @@
 // 로딩
 $(window).on('load',function() {
-  // $('.loader').hide();
+  $('.loader').hide();
+  $('body').addClass('loaded');
 });
 
 
