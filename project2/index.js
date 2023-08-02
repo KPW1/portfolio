@@ -1,18 +1,6 @@
-
-function preload() {
-  for(let i = 0; i < preload.arguments.lenght; i++) {
-    images[i] = new Image();
-    images[i].src = preload.arguments.src;
-  }
-}
-
-preload(
-  "../common/loading.gif"
-
-)
-
+// 로딩
 $(window).on('load',function() {
-  $('#load').hide();
+  // $('.loader').hide();
 });
 
 
